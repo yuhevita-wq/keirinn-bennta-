@@ -1,0 +1,137 @@
+{
+  "schema": "f1s_third_conditional_research_v1",
+  "scope": "F1 S級 only",
+  "status": "SELECTED_RESEARCH_REFERENCE_NOT_MARKET_OR_WAGER_MODEL",
+  "first_model": "V2 full_plus_line; foreign term999 unscaled; q_i from 12 pinned historical periods with high hinge",
+  "second_model": "models/second_conditional_v1.json, unchanged",
+  "fit_races": 14081,
+  "fit_candidate_rows": 69300,
+  "observed_finishes": "1-3 uniquely ordered from historic actual race results",
+  "conditional_actual_first_and_second": "P(3rd=k | first=i, second=j), with j != i and k != i,j",
+  "model_family": "delta_plus_exact_position_and_role",
+  "equation": "P(k third|i first,j second)=q_k^delta exp(D_pos(i,j,k)+D_role(k)) / sum_{h != i,j} q_h^delta exp(D_pos(i,j,h)+D_role(h))",
+  "reference_categories": {
+    "position": "neither_line",
+    "role": "leader"
+  },
+  "coefficient_names": [
+    "log_q",
+    "ahead_of_both",
+    "between_first_second",
+    "behind_both",
+    "ahead_of_first",
+    "immediately_behind_first",
+    "further_behind_first",
+    "ahead_of_second",
+    "immediately_behind_second",
+    "further_behind_second",
+    "role_second",
+    "role_third_or_later",
+    "role_solo"
+  ],
+  "coefficients": {
+    "delta": 0.4891292239397931,
+    "ahead_of_both": 1.0906529812357888,
+    "between_first_second": 0.9521288438139953,
+    "behind_both": 1.5260877764412724,
+    "ahead_of_first": 0.698837605790015,
+    "immediately_behind_first": 0.8355382156879493,
+    "further_behind_first": 0.043535136284526384,
+    "ahead_of_second": 0.48417200188068676,
+    "immediately_behind_second": 0.8208813143270862,
+    "further_behind_second": 0.07010725110849189,
+    "role_second": 0.17888866416031698,
+    "role_third_or_later": 0.4224441089253335,
+    "role_solo": 0.5271962240895629,
+    "neither_line": 0,
+    "role_leader": 0
+  },
+  "position_definitions": {
+    "ahead_of_both": "Third candidate in same predicted line as first and second and ahead of both in predicted order",
+    "between_first_second": "Third candidate in shared line of first and second, positioned strictly between them",
+    "behind_both": "Third candidate in shared line of first and second, after both in predicted order",
+    "ahead_of_first": "First and second differ in line; third candidate first line, ahead of first",
+    "immediately_behind_first": "First and second differ in line; third immediately after first in first's predicted line",
+    "further_behind_first": "First and second differ in line; third at least two positions behind first",
+    "ahead_of_second": "First and second differ in line; third candidate second line, ahead of second",
+    "immediately_behind_second": "First and second differ in line; third immediately after second in second's predicted line",
+    "further_behind_second": "First and second differ in line; third at least two positions behind second",
+    "neither_line": "Third candidate in line other than lines containing first and second"
+  },
+  "role_definitions": {
+    "role_leader": "Car first in line",
+    "role_second": "Car second in line",
+    "role_third_or_later": "Car at position 3 or later",
+    "role_solo": "Line of size 1"
+  },
+  "model_selection": {
+    "selection": "All-data MLE for discovery and BIC; supported by chronological comparison with coefficients estimated on 6393 prior races and scored on 7688 later races",
+    "all_14081_in_sample_log_loss": 1.427006971644692,
+    "chronological_development_training_races": 6393,
+    "chronological_evaluation_races": 7688,
+    "chrono_evaluation_log_loss": 1.4309034298845955,
+    "chrono_best_conditional_3rd_candidate_hit": 0.402315296566077,
+    "prior_exponent_only_log_loss": 1.5508055627461408,
+    "prior_harville_log_loss": 1.6863410713084375,
+    "prior_position_without_role_log_loss": 1.4366139170684034,
+    "role_addition_day_bootstrap_improvement": 0.005710487183807793,
+    "role_addition_bootstrap95": [
+      0.0027749676355191735,
+      0.008927938953248785
+    ],
+    "full_model_dev_coefficient_names": [
+      "log_q",
+      "ahead_of_both",
+      "between_first_second",
+      "behind_both",
+      "ahead_of_first",
+      "immediately_behind_first",
+      "further_behind_first",
+      "ahead_of_second",
+      "immediately_behind_second",
+      "further_behind_second",
+      "role_second",
+      "role_third_or_later",
+      "role_solo"
+    ],
+    "fitted_on_6393_before_evaluation": [
+      0.4999712178662341,
+      1.088630907842155,
+      1.167006660810316,
+      1.5194130607922796,
+      0.7085705168993531,
+      0.81612028357291,
+      -0.02120045455817217,
+      0.5609746461114132,
+      0.8770444361906076,
+      0.07704887018704028,
+      0.1817876553281625,
+      0.43636516941176406,
+      0.6008296448513167
+    ]
+  },
+  "actual_results_empirical": {
+    "races_with_first_second_same_line": 7694,
+    "third_in_same_line_when_first_second_same": 2539,
+    "first_second_different_line_races": 6387,
+    "third_in_first_line_only": 2257,
+    "third_in_second_line_only": 1999,
+    "third_in_neither_line_when_first_second_different": 2131,
+    "third_behind_both_in_same_line": 1895,
+    "harville_expected_third_behind_both": 410.9797983584534
+  },
+  "inference_rule": "Use pre-race first_win q_i and second conditional P(j|i) to assign every ordered distinct triple P(i first, j second, k third) = q_i P(j|i) P(k|i,j). Do not supply actual first or second when inferring.",
+  "warning": [
+    "Statistical conditional 3rd accuracy with observed first-second known is not equivalent to an unconditional 3連単 hit rate.",
+    "In-sample all-14081 coefficients are law discovery, not unobserved prospective evaluation.",
+    "Chronological evaluation dates have been previously inspected in other research, not virgin.",
+    "Source racecard predeadline snapshots are not certified.",
+    "No ticket odds or prices, no expected value, no profit evidence."
+  ],
+  "provenance": [
+    "reports/third_place_empirical.json",
+    "reports/third_place_models.json",
+    "reports/staged_history_audit.json"
+  ],
+  "old_v7_third_coefficients_reused": false
+}
