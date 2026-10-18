@@ -67,12 +67,17 @@ jobs:
           python -u project/research/second_place_fit.py \
             --input project/stage/f1_s_class_14081.jsonl \
             --out project/reports/second_place_models.json
+      - name: Compare directed positions vs simple same-line correction
+        run: |
+          python -u project/research/second_place_compare.py \
+            --input project/stage/f1_s_class_14081.jsonl \
+            --out project/reports/second_place_compare.json
       - name: Commit immutable study results to new GitHub research repo
         run: |
           set -euo pipefail
           git -C project config user.name "github-actions[bot]"
           git -C project config user.email "github-actions[bot]@users.noreply.github.com"
-          git -C project add reports/second_place_empirical.json reports/second_place_models.json
+          git -C project add reports/second_place_empirical.json reports/second_place_models.json reports/second_place_compare.json
           git -C project commit -m "Report 14081 F1 S-class second-place empirical residuals and MLE rules [skip ci]"
           git -C project pull --rebase origin main
           git -C project push origin HEAD:main
@@ -82,5 +87,6 @@ jobs:
           path: |
             project/reports/second_place_empirical.json
             project/reports/second_place_models.json
+            project/reports/second_place_compare.json
             project/stage/f1_s_class_14081.audit.json
           retention-days: 30
