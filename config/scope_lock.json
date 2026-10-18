@@ -1,0 +1,63 @@
+{
+  "schema": "f1_s_scope_and_sample_lock_v2",
+  "scope_id": "F1_S_CLASS_ONLY",
+  "status": "FROZEN_SOURCE_RACE_IDS_AND_AUDIT",
+  "source_repo": "yuhevita-wq/keirin-market-analysis-",
+  "source_commit_sha": "8da8f4f8e1125eb522df5546d07cd6657fab7dda",
+  "meeting_grade": "F1",
+  "race_class": "S級",
+  "included": "F1 meeting S-class races across race subtypes; validated 5-9 entrants with unique first, second, third and precomputed independent-win forecasts",
+  "excludes": [
+    "F2",
+    "A級",
+    "A級チャレンジ",
+    "G1",
+    "G2",
+    "G3",
+    "ガールズ"
+  ],
+  "all_eligible_races": 14081,
+  "generated_forecast_races": 14215,
+  "podium_invalid_excluded": 134,
+  "candidate_counting": {
+    "second": "sum(n_r-1) over races with unique podium",
+    "third": "sum(n_r-2) over races with unique podium"
+  },
+  "partitions_provenance_only": {
+    "exploratory_fit_to_2025_03_31": {
+      "races": 6393,
+      "second_candidates": 37861,
+      "third_candidates": 31468,
+      "race_ids_sha256": "648c8a21fdf6343fe31f8efe7d70a73c45d04f9c21f9741d2f9127c7c05497f6"
+    },
+    "chronology_check_from_2025_04_01": {
+      "races": 7688,
+      "second_candidates": 45520,
+      "third_candidates": 37832,
+      "race_ids_sha256": "b1229889672487fb765990790fd5f0ae7dffaa53740a26fd2a6db74a76b8b299"
+    }
+  },
+  "all_eligible_second_candidate_rows": 83381,
+  "all_eligible_third_candidate_rows": 69300,
+  "benter_1994_conditional_tables_reference": {
+    "races": 3198,
+    "second_candidates": 29679,
+    "third_candidates": 26481
+  },
+  "interpretation": "Benter sample size is a comparison benchmark; no claim that Benter had independent 3198-race training and another independent 3198-race test for 2nd/3rd correction.",
+  "discovery_all_eligible_races_allowed": true,
+  "model_evaluation_must_report_in_sample_vs_out_of_period_without_conflating": true,
+  "no_future_result_used_as_forecast_feature": true,
+  "snapshot_asof_validity_verified": false,
+  "forbid_source_race_id_set_mutation_without_new_version": true,
+  "first_win_adoption": {
+    "model": "V2 full_plus_line + unscaled foreign term999 binary + high-hinge probability calibration",
+    "evaluation_races": 7688,
+    "calibration_theta": 0.6412587661746468,
+    "pseudo_r2": 0.18701814902834113,
+    "mean_log_loss": 1.571834380588097,
+    "status": "ADOPTED_AS_FIRST_WIN_REFERENCE_NOT_PROFITABILITY_CLAIM"
+  },
+  "second_third_coefficients": "NOT_ADOPTED_OR_IMPORTED_FROM_OLD_V7",
+  "future_scope_expansion": "Any A-class or other races require an independent scope/model, not pooled."
+}
