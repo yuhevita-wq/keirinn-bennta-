@@ -32,6 +32,9 @@
 - [採用理由・検証の留保](docs/FIRST_WIN_ADOPTION.md)
 - [1着確率の計算方法](docs/FIRST_WIN_MODEL.md)
 - `src/predict_first.py`：出走表・ライン情報から採用済み1着確率を計算するコード
+- [`scripts/stage_history.py`](scripts/stage_history.py)：旧データの固定コミットから14,081Rの1着確率・ライン・1〜3着を照合
+- [固定母数を実際に再現した監査結果](reports/staged_history_audit.json)
+- [歴史データを新研究で使用する手順](docs/HISTORICAL_DATA_STAGING.md)
 - `tests/`：型・確率総和・再現性のテスト
 
 ## 研究上の原則
