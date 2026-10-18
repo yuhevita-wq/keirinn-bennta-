@@ -1,0 +1,833 @@
+{
+  "research_stage": "EMPIRICAL_RESULT_FIRST_BEFORE_MODEL_FITTING",
+  "race_count": 14081,
+  "candidate_rows": 83381,
+  "field_sizes": {
+    "5": 148,
+    "6": 809,
+    "7": 13124
+  },
+  "reference": "Harville conditional baseline P(second=j | first=i)=q_j/(1-q_i). Same rows as Benter Table 9; q is corrected independently estimated F1 S級 first-place probability.",
+  "no_second_model_fitted": true,
+  "all": {
+    "candidate_count": 83381,
+    "unique_races": 14081,
+    "mean_predicted_probability": 0.16887540326932923,
+    "actual_frequency": 0.16887540326932995,
+    "expected_2nd": 14080.99999999994,
+    "actual_2nd": 14081,
+    "observed_minus_expected": 6.002665031701326e-11,
+    "z_normal_reference_not_independence_adjusted": 6.020171706813426e-13
+  },
+  "bins": [
+    {
+      "range": [
+        0,
+        0.01
+      ],
+      "candidate_count": 628,
+      "unique_races": 609,
+      "mean_predicted_probability": 0.0060778941462234,
+      "actual_frequency": 0.041401273885350316,
+      "expected_2nd": 3.816917523828295,
+      "actual_2nd": 26,
+      "observed_minus_expected": 22.183082476171705,
+      "z_normal_reference_not_independence_adjusted": 11.401077296786362
+    },
+    {
+      "range": [
+        0.01,
+        0.025
+      ],
+      "candidate_count": 4992,
+      "unique_races": 4292,
+      "mean_predicted_probability": 0.0185341850416665,
+      "actual_frequency": 0.03986378205128205,
+      "expected_2nd": 92.52265172799916,
+      "actual_2nd": 199,
+      "observed_minus_expected": 106.47734827200084,
+      "z_normal_reference_not_independence_adjusted": 11.178769514373009
+    },
+    {
+      "range": [
+        0.025,
+        0.05
+      ],
+      "candidate_count": 11398,
+      "unique_races": 8218,
+      "mean_predicted_probability": 0.037318166425959656,
+      "actual_frequency": 0.06422179329706966,
+      "expected_2nd": 425.35246092308813,
+      "actual_2nd": 732,
+      "observed_minus_expected": 306.64753907691187,
+      "z_normal_reference_not_independence_adjusted": 15.164769583317527
+    },
+    {
+      "range": [
+        0.05,
+        0.075
+      ],
+      "candidate_count": 9878,
+      "unique_races": 7419,
+      "mean_predicted_probability": 0.062067996589311523,
+      "actual_frequency": 0.08625227778902612,
+      "expected_2nd": 613.1076703092192,
+      "actual_2nd": 852,
+      "observed_minus_expected": 238.8923296907808,
+      "z_normal_reference_not_independence_adjusted": 9.966499455122344
+    },
+    {
+      "range": [
+        0.075,
+        0.1
+      ],
+      "candidate_count": 8141,
+      "unique_races": 6415,
+      "mean_predicted_probability": 0.08723409174677774,
+      "actual_frequency": 0.10551529296155264,
+      "expected_2nd": 710.1727409105175,
+      "actual_2nd": 859,
+      "observed_minus_expected": 148.82725908948248,
+      "z_normal_reference_not_independence_adjusted": 5.847395937309345
+    },
+    {
+      "range": [
+        0.1,
+        0.15
+      ],
+      "candidate_count": 12950,
+      "unique_races": 8901,
+      "mean_predicted_probability": 0.12360943210300424,
+      "actual_frequency": 0.13451737451737453,
+      "expected_2nd": 1600.7421457339049,
+      "actual_2nd": 1742,
+      "observed_minus_expected": 141.25785426609514,
+      "z_normal_reference_not_independence_adjusted": 3.7750469222402483
+    },
+    {
+      "range": [
+        0.15,
+        0.2
+      ],
+      "candidate_count": 9438,
+      "unique_races": 7083,
+      "mean_predicted_probability": 0.17377038658324778,
+      "actual_frequency": 0.1652892561983471,
+      "expected_2nd": 1640.0449085726925,
+      "actual_2nd": 1560,
+      "observed_minus_expected": -80.04490857269252,
+      "z_normal_reference_not_independence_adjusted": -2.1760586788413656
+    },
+    {
+      "range": [
+        0.2,
+        0.25
+      ],
+      "candidate_count": 7017,
+      "unique_races": 5640,
+      "mean_predicted_probability": 0.2238878724675607,
+      "actual_frequency": 0.20806612512469716,
+      "expected_2nd": 1571.0212011048734,
+      "actual_2nd": 1460,
+      "observed_minus_expected": -111.0212011048734,
+      "z_normal_reference_not_independence_adjusted": -3.1813706668008113
+    },
+    {
+      "range": [
+        0.25,
+        0.3
+      ],
+      "candidate_count": 5090,
+      "unique_races": 4337,
+      "mean_predicted_probability": 0.2737660264712791,
+      "actual_frequency": 0.24538310412573675,
+      "expected_2nd": 1393.4690747388106,
+      "actual_2nd": 1249,
+      "observed_minus_expected": -144.4690747388106,
+      "z_normal_reference_not_independence_adjusted": -4.543733673183719
+    },
+    {
+      "range": [
+        0.3,
+        0.4
+      ],
+      "candidate_count": 6553,
+      "unique_races": 5571,
+      "mean_predicted_probability": 0.345718479198521,
+      "actual_frequency": 0.31603845566915917,
+      "expected_2nd": 2265.493194187908,
+      "actual_2nd": 2071,
+      "observed_minus_expected": -194.4931941879081,
+      "z_normal_reference_not_independence_adjusted": -5.06084232454157
+    },
+    {
+      "range": [
+        0.4,
+        0.5
+      ],
+      "candidate_count": 3862,
+      "unique_races": 3825,
+      "mean_predicted_probability": 0.4459349432032112,
+      "actual_frequency": 0.3795960642154324,
+      "expected_2nd": 1722.2007506508016,
+      "actual_2nd": 1466,
+      "observed_minus_expected": -256.20075065080164,
+      "z_normal_reference_not_independence_adjusted": -8.30786754719735
+    },
+    {
+      "range": [
+        0.5,
+        0.6
+      ],
+      "candidate_count": 2129,
+      "unique_races": 2129,
+      "mean_predicted_probability": 0.5439702244538124,
+      "actual_frequency": 0.48285580084546736,
+      "expected_2nd": 1158.1126078621664,
+      "actual_2nd": 1028,
+      "observed_minus_expected": -130.11260786216644,
+      "z_normal_reference_not_independence_adjusted": -5.670934812128857
+    },
+    {
+      "range": [
+        0.6,
+        0.7
+      ],
+      "candidate_count": 909,
+      "unique_races": 909,
+      "mean_predicted_probability": 0.6438573899135263,
+      "actual_frequency": 0.6083608360836084,
+      "expected_2nd": 585.2663674313953,
+      "actual_2nd": 553,
+      "observed_minus_expected": -32.26636743139534,
+      "z_normal_reference_not_independence_adjusted": -2.2388602192430613
+    },
+    {
+      "range": [
+        0.7,
+        1
+      ],
+      "candidate_count": 396,
+      "unique_races": 396,
+      "mean_predicted_probability": 0.7567608796030686,
+      "actual_frequency": 0.7171717171717171,
+      "expected_2nd": 299.6773083228152,
+      "actual_2nd": 284,
+      "observed_minus_expected": -15.677308322815179,
+      "z_normal_reference_not_independence_adjusted": -1.846228507795649
+    }
+  ],
+  "winner_line_relation": {
+    "other_line": {
+      "candidate_count": 61970,
+      "unique_races": 14080,
+      "mean_predicted_probability": 0.15612385900165707,
+      "actual_frequency": 0.1030659996772632,
+      "expected_2nd": 9674.995542332688,
+      "actual_2nd": 6387,
+      "observed_minus_expected": -3287.9955423326883,
+      "z_normal_reference_not_independence_adjusted": -38.78725903347106
+    },
+    "same_line": {
+      "candidate_count": 21411,
+      "unique_races": 13335,
+      "mean_predicted_probability": 0.20578228282972158,
+      "actual_frequency": 0.359347998692261,
+      "expected_2nd": 4406.004457667169,
+      "actual_2nd": 7694,
+      "observed_minus_expected": 3287.995542332831,
+      "z_normal_reference_not_independence_adjusted": 62.6316294098869
+    }
+  },
+  "second_candidate_role": {
+    "leader": {
+      "candidate_count": 30811,
+      "unique_races": 14010,
+      "mean_predicted_probability": 0.20916051737915548,
+      "actual_frequency": 0.1858751744506832,
+      "expected_2nd": 6444.444700969159,
+      "actual_2nd": 5727,
+      "observed_minus_expected": -717.4447009691594,
+      "z_normal_reference_not_independence_adjusted": -10.790087080053425
+    },
+    "second": {
+      "candidate_count": 30770,
+      "unique_races": 14031,
+      "mean_predicted_probability": 0.2012938479703615,
+      "actual_frequency": 0.20656483587910301,
+      "expected_2nd": 6193.811702048024,
+      "actual_2nd": 6356,
+      "observed_minus_expected": 162.18829795197598,
+      "z_normal_reference_not_independence_adjusted": 2.482851583028013
+    },
+    "solo": {
+      "candidate_count": 7422,
+      "unique_races": 5637,
+      "mean_predicted_probability": 0.10788682054778129,
+      "actual_frequency": 0.09296685529506872,
+      "expected_2nd": 800.7359821056327,
+      "actual_2nd": 690,
+      "observed_minus_expected": -110.73598210563273,
+      "z_normal_reference_not_independence_adjusted": -4.321591131952055
+    },
+    "third_or_later": {
+      "candidate_count": 14378,
+      "unique_races": 11381,
+      "mean_predicted_probability": 0.044652080600721754,
+      "actual_frequency": 0.09097231882042009,
+      "expected_2nd": 642.0076148771774,
+      "actual_2nd": 1308,
+      "observed_minus_expected": 665.9923851228226,
+      "z_normal_reference_not_independence_adjusted": 27.254311013132764
+    }
+  },
+  "directed_line_position": {
+    "ahead_of_winner": {
+      "candidate_count": 7399,
+      "unique_races": 6919,
+      "mean_predicted_probability": 0.2976913419520394,
+      "actual_frequency": 0.44965535883227464,
+      "expected_2nd": 2202.6182391031393,
+      "actual_2nd": 3327,
+      "observed_minus_expected": 1124.3817608968607,
+      "z_normal_reference_not_independence_adjusted": 31.053157823070944
+    },
+    "behind_winner_later": {
+      "candidate_count": 3606,
+      "unique_races": 3313,
+      "mean_predicted_probability": 0.05477342632111533,
+      "actual_frequency": 0.064891846921797,
+      "expected_2nd": 197.51297531394187,
+      "actual_2nd": 234,
+      "observed_minus_expected": 36.487024686058135,
+      "z_normal_reference_not_independence_adjusted": 2.7150887630358977
+    },
+    "directly_behind_winner": {
+      "candidate_count": 10406,
+      "unique_races": 10406,
+      "mean_predicted_probability": 0.1927612188401027,
+      "actual_frequency": 0.39717470689986545,
+      "expected_2nd": 2005.8732432501088,
+      "actual_2nd": 4133,
+      "observed_minus_expected": 2127.1267567498912,
+      "z_normal_reference_not_independence_adjusted": 59.82214530035564
+    },
+    "other_line": {
+      "candidate_count": 61970,
+      "unique_races": 14080,
+      "mean_predicted_probability": 0.15612385900165707,
+      "actual_frequency": 0.1030659996772632,
+      "expected_2nd": 9674.995542332688,
+      "actual_2nd": 6387,
+      "observed_minus_expected": -3287.9955423326883,
+      "z_normal_reference_not_independence_adjusted": -38.78725903347106
+    }
+  },
+  "winner_role_x_relation": {
+    "leader": {
+      "same_line": {
+        "candidate_count": 9778,
+        "unique_races": 6416,
+        "mean_predicted_probability": 0.20324008209392186,
+        "actual_frequency": 0.3638780936796891,
+        "expected_2nd": 1987.2815227143678,
+        "actual_2nd": 3558,
+        "observed_minus_expected": 1570.7184772856322,
+        "z_normal_reference_not_independence_adjusted": 44.51096606948517
+      },
+      "other_line": {
+        "candidate_count": 28198,
+        "unique_races": 6415,
+        "mean_predicted_probability": 0.15705789337136136,
+        "actual_frequency": 0.10135470600751827,
+        "expected_2nd": 4428.718477285648,
+        "actual_2nd": 2858,
+        "observed_minus_expected": -1570.718477285648,
+        "z_normal_reference_not_independence_adjusted": -27.440089853937355
+      }
+    },
+    "second": {
+      "same_line": {
+        "candidate_count": 10625,
+        "unique_races": 6457,
+        "mean_predicted_probability": 0.20435528346747142,
+        "actual_frequency": 0.36056470588235295,
+        "expected_2nd": 2171.274886841884,
+        "actual_2nd": 3831,
+        "observed_minus_expected": 1659.725113158116,
+        "z_normal_reference_not_independence_adjusted": 45.23325956918532
+      },
+      "other_line": {
+        "candidate_count": 27633,
+        "unique_races": 6457,
+        "mean_predicted_probability": 0.15509445638034444,
+        "actual_frequency": 0.09503130315202837,
+        "expected_2nd": 4285.725113158058,
+        "actual_2nd": 2626,
+        "observed_minus_expected": -1659.7251131580579,
+        "z_normal_reference_not_independence_adjusted": -29.347627923217587
+      }
+    },
+    "solo": {
+      "same_line": {
+        "candidate_count": 0
+      },
+      "other_line": {
+        "candidate_count": 4400,
+        "unique_races": 746,
+        "mean_predicted_probability": 0.1695454545454538,
+        "actual_frequency": 0.16954545454545455,
+        "expected_2nd": 745.9999999999967,
+        "actual_2nd": 746,
+        "observed_minus_expected": 3.296918293926865e-12,
+        "z_normal_reference_not_independence_adjusted": 1.416565903969079e-13
+      }
+    },
+    "third_or_later": {
+      "same_line": {
+        "candidate_count": 1008,
+        "unique_races": 462,
+        "mean_predicted_probability": 0.24548417471323378,
+        "actual_frequency": 0.30257936507936506,
+        "expected_2nd": 247.44804811093965,
+        "actual_2nd": 305,
+        "observed_minus_expected": 57.55195188906035,
+        "z_normal_reference_not_independence_adjusted": 4.489124782876505
+      },
+      "other_line": {
+        "candidate_count": 1739,
+        "unique_races": 462,
+        "mean_predicted_probability": 0.1233766255831284,
+        "actual_frequency": 0.09028177113283496,
+        "expected_2nd": 214.5519518890603,
+        "actual_2nd": 157,
+        "observed_minus_expected": -57.55195188906029,
+        "z_normal_reference_not_independence_adjusted": -4.423124088280519
+      }
+    }
+  },
+  "first_probability_bins": {
+    "first_q_below_10pct": {
+      "same_line": {
+        "candidate_count": 2573,
+        "unique_races": 1834,
+        "mean_predicted_probability": 0.16321429534630857,
+        "actual_frequency": 0.3455110765643218,
+        "expected_2nd": 419.95038192605193,
+        "actual_2nd": 889,
+        "observed_minus_expected": 469.04961807394807,
+        "z_normal_reference_not_independence_adjusted": 27.20413766123982
+      },
+      "other_line": {
+        "candidate_count": 10152,
+        "unique_races": 2140,
+        "mean_predicted_probability": 0.16942963140996412,
+        "actual_frequency": 0.12322695035460993,
+        "expected_2nd": 1720.0496180739556,
+        "actual_2nd": 1251,
+        "observed_minus_expected": -469.04961807395557,
+        "z_normal_reference_not_independence_adjusted": -13.485189204997567
+      }
+    },
+    "first_q_10_to_20pct": {
+      "same_line": {
+        "candidate_count": 4775,
+        "unique_races": 3374,
+        "mean_predicted_probability": 0.17944142980038347,
+        "actual_frequency": 0.3738219895287958,
+        "expected_2nd": 856.832827296831,
+        "actual_2nd": 1785,
+        "observed_minus_expected": 928.167172703169,
+        "z_normal_reference_not_independence_adjusted": 38.8983444878055
+      },
+      "other_line": {
+        "candidate_count": 16654,
+        "unique_races": 3612,
+        "mean_predicted_probability": 0.16543576154096062,
+        "actual_frequency": 0.10970337456466915,
+        "expected_2nd": 2755.167172703158,
+        "actual_2nd": 1827,
+        "observed_minus_expected": -928.167172703158,
+        "z_normal_reference_not_independence_adjusted": -20.771529553940905
+      }
+    },
+    "first_q_20_to_40pct": {
+      "same_line": {
+        "candidate_count": 8876,
+        "unique_races": 5367,
+        "mean_predicted_probability": 0.21626480065764545,
+        "actual_frequency": 0.3632266786840919,
+        "expected_2nd": 1919.566370637261,
+        "actual_2nd": 3224,
+        "observed_minus_expected": 1304.433629362739,
+        "z_normal_reference_not_independence_adjusted": 38.23546548204146
+      },
+      "other_line": {
+        "candidate_count": 23848,
+        "unique_races": 5527,
+        "mean_predicted_probability": 0.15130969596455587,
+        "actual_frequency": 0.09661187520966119,
+        "expected_2nd": 3608.4336293627284,
+        "actual_2nd": 2304,
+        "observed_minus_expected": -1304.4336293627284,
+        "z_normal_reference_not_independence_adjusted": -24.95873873958362
+      }
+    },
+    "first_q_40_to_60pct": {
+      "same_line": {
+        "candidate_count": 4449,
+        "unique_races": 2385,
+        "mean_predicted_probability": 0.23314272856411072,
+        "actual_frequency": 0.3463699707799506,
+        "expected_2nd": 1037.2519993817286,
+        "actual_2nd": 1541,
+        "observed_minus_expected": 503.74800061827136,
+        "z_normal_reference_not_independence_adjusted": 20.233063440888078
+      },
+      "other_line": {
+        "candidate_count": 9810,
+        "unique_races": 2419,
+        "mean_predicted_probability": 0.1408509684626174,
+        "actual_frequency": 0.08950050968399592,
+        "expected_2nd": 1381.7480006182768,
+        "actual_2nd": 878,
+        "observed_minus_expected": -503.7480006182768,
+        "z_normal_reference_not_independence_adjusted": -15.326838507816348
+      }
+    },
+    "first_q_over_60pct": {
+      "same_line": {
+        "candidate_count": 738,
+        "unique_races": 375,
+        "mean_predicted_probability": 0.233608236348676,
+        "actual_frequency": 0.34552845528455284,
+        "expected_2nd": 172.40287842532288,
+        "actual_2nd": 255,
+        "observed_minus_expected": 82.59712157467712,
+        "z_normal_reference_not_independence_adjusted": 8.039022292633646
+      },
+      "other_line": {
+        "candidate_count": 1506,
+        "unique_races": 382,
+        "mean_predicted_probability": 0.13917471552103397,
+        "actual_frequency": 0.08432934926958831,
+        "expected_2nd": 209.59712157467717,
+        "actual_2nd": 127,
+        "observed_minus_expected": -82.59712157467717,
+        "z_normal_reference_not_independence_adjusted": -6.378507271409424
+      }
+    }
+  },
+  "split_x_relation": {
+    "fit": {
+      "same_line": {
+        "candidate_count": 9898,
+        "unique_races": 6108,
+        "mean_predicted_probability": 0.2049800536822298,
+        "actual_frequency": 0.35946655890078805,
+        "expected_2nd": 2028.8925713467106,
+        "actual_2nd": 3558,
+        "observed_minus_expected": 1529.1074286532894,
+        "z_normal_reference_not_independence_adjusted": 42.87979400328789
+      },
+      "other_line": {
+        "candidate_count": 27963,
+        "unique_races": 6393,
+        "mean_predicted_probability": 0.15606721126679196,
+        "actual_frequency": 0.10138397167685871,
+        "expected_2nd": 4364.107428653304,
+        "actual_2nd": 2835,
+        "observed_minus_expected": -1529.107428653304,
+        "z_normal_reference_not_independence_adjusted": -26.863993604514782
+      }
+    },
+    "chronological_check": {
+      "same_line": {
+        "candidate_count": 11513,
+        "unique_races": 7227,
+        "mean_predicted_probability": 0.20647197831325279,
+        "actual_frequency": 0.3592460696603839,
+        "expected_2nd": 2377.1118863204792,
+        "actual_2nd": 4136,
+        "observed_minus_expected": 1758.8881136795208,
+        "z_normal_reference_not_independence_adjusted": 45.653622419940106
+      },
+      "other_line": {
+        "candidate_count": 34007,
+        "unique_races": 7687,
+        "mean_predicted_probability": 0.1561704388414005,
+        "actual_frequency": 0.10444908401211515,
+        "expected_2nd": 5310.888113679507,
+        "actual_2nd": 3552,
+        "observed_minus_expected": -1758.8881136795071,
+        "z_normal_reference_not_independence_adjusted": -28.000010237848816
+      }
+    }
+  },
+  "per_period_relation": {
+    "2024q1": {
+      "same_line": {
+        "candidate_count": 2067,
+        "unique_races": 1267,
+        "mean_predicted_probability": 0.20751019721721514,
+        "actual_frequency": 0.3720367682631834,
+        "expected_2nd": 428.9235776479837,
+        "actual_2nd": 769,
+        "observed_minus_expected": 340.0764223520163,
+        "z_normal_reference_not_independence_adjusted": 20.883210113178183
+      },
+      "other_line": {
+        "candidate_count": 5691,
+        "unique_races": 1316,
+        "mean_predicted_probability": 0.15587355866315553,
+        "actual_frequency": 0.09611667545246881,
+        "expected_2nd": 887.0764223520181,
+        "actual_2nd": 547,
+        "observed_minus_expected": -340.0764223520181,
+        "z_normal_reference_not_independence_adjusted": -13.268821305223222
+      }
+    },
+    "2024q2": {
+      "same_line": {
+        "candidate_count": 1974,
+        "unique_races": 1229,
+        "mean_predicted_probability": 0.20614780132250332,
+        "actual_frequency": 0.37031408308004055,
+        "expected_2nd": 406.93575981062156,
+        "actual_2nd": 731,
+        "observed_minus_expected": 324.06424018937844,
+        "z_normal_reference_not_independence_adjusted": 20.249202706309106
+      },
+      "other_line": {
+        "candidate_count": 5649,
+        "unique_races": 1285,
+        "mean_predicted_probability": 0.1554371110266202,
+        "actual_frequency": 0.09807045494777837,
+        "expected_2nd": 878.0642401893774,
+        "actual_2nd": 554,
+        "observed_minus_expected": -324.0642401893774,
+        "z_normal_reference_not_independence_adjusted": -12.664951375725838
+      }
+    },
+    "2024q3": {
+      "same_line": {
+        "candidate_count": 2049,
+        "unique_races": 1227,
+        "mean_predicted_probability": 0.20220657494691446,
+        "actual_frequency": 0.340165934602245,
+        "expected_2nd": 414.3212720662277,
+        "actual_2nd": 697,
+        "observed_minus_expected": 282.6787279337723,
+        "z_normal_reference_not_independence_adjusted": 17.499925096467692
+      },
+      "other_line": {
+        "candidate_count": 5534,
+        "unique_races": 1282,
+        "mean_predicted_probability": 0.15679051823884582,
+        "actual_frequency": 0.1057101554029635,
+        "expected_2nd": 867.6787279337728,
+        "actual_2nd": 585,
+        "observed_minus_expected": -282.67872793377285,
+        "z_normal_reference_not_independence_adjusted": -11.162210963644606
+      }
+    },
+    "2024q4": {
+      "same_line": {
+        "candidate_count": 1971,
+        "unique_races": 1223,
+        "mean_predicted_probability": 0.20161899085167248,
+        "actual_frequency": 0.35210553018772195,
+        "expected_2nd": 397.3910309686465,
+        "actual_2nd": 694,
+        "observed_minus_expected": 296.6089690313535,
+        "z_normal_reference_not_independence_adjusted": 18.725872673593138
+      },
+      "other_line": {
+        "candidate_count": 5556,
+        "unique_races": 1272,
+        "mean_predicted_probability": 0.15741702106395875,
+        "actual_frequency": 0.10403167746580273,
+        "expected_2nd": 874.6089690313548,
+        "actual_2nd": 578,
+        "observed_minus_expected": -296.60896903135483,
+        "z_normal_reference_not_independence_adjusted": -11.641025245190256
+      }
+    },
+    "2025q1": {
+      "same_line": {
+        "candidate_count": 1837,
+        "unique_races": 1162,
+        "mean_predicted_probability": 0.20757807885315063,
+        "actual_frequency": 0.36309199782253676,
+        "expected_2nd": 381.3209308532377,
+        "actual_2nd": 667,
+        "observed_minus_expected": 285.6790691467623,
+        "z_normal_reference_not_independence_adjusted": 18.49717069426258
+      },
+      "other_line": {
+        "candidate_count": 5533,
+        "unique_races": 1238,
+        "mean_predicted_probability": 0.1548308456798773,
+        "actual_frequency": 0.1031989878908368,
+        "expected_2nd": 856.6790691467611,
+        "actual_2nd": 571,
+        "observed_minus_expected": -285.6790691467611,
+        "z_normal_reference_not_independence_adjusted": -11.312148901484617
+      }
+    },
+    "2025q2": {
+      "same_line": {
+        "candidate_count": 1931,
+        "unique_races": 1179,
+        "mean_predicted_probability": 0.20475635723496413,
+        "actual_frequency": 0.3516312791299845,
+        "expected_2nd": 395.38452582071574,
+        "actual_2nd": 679,
+        "observed_minus_expected": 283.61547417928426,
+        "z_normal_reference_not_independence_adjusted": 18.007533064479638
+      },
+      "other_line": {
+        "candidate_count": 5447,
+        "unique_races": 1247,
+        "mean_predicted_probability": 0.15652936922696623,
+        "actual_frequency": 0.10446117128694694,
+        "expected_2nd": 852.615474179285,
+        "actual_2nd": 569,
+        "observed_minus_expected": -283.615474179285,
+        "z_normal_reference_not_independence_adjusted": -11.246931912300079
+      }
+    },
+    "2025q3": {
+      "same_line": {
+        "candidate_count": 1975,
+        "unique_races": 1225,
+        "mean_predicted_probability": 0.2065664651751906,
+        "actual_frequency": 0.3822784810126582,
+        "expected_2nd": 407.9687687210014,
+        "actual_2nd": 755,
+        "observed_minus_expected": 347.0312312789986,
+        "z_normal_reference_not_independence_adjusted": 21.70537141909478
+      },
+      "other_line": {
+        "candidate_count": 5705,
+        "unique_races": 1291,
+        "mean_predicted_probability": 0.15478198620140202,
+        "actual_frequency": 0.09395267309377739,
+        "expected_2nd": 883.0312312789985,
+        "actual_2nd": 536,
+        "observed_minus_expected": -347.03123127899846,
+        "z_normal_reference_not_independence_adjusted": -13.552186775368769
+      }
+    },
+    "2025q4": {
+      "same_line": {
+        "candidate_count": 1962,
+        "unique_races": 1228,
+        "mean_predicted_probability": 0.20872708163854375,
+        "actual_frequency": 0.363914373088685,
+        "expected_2nd": 409.52253417482285,
+        "actual_2nd": 714,
+        "observed_minus_expected": 304.47746582517715,
+        "z_normal_reference_not_independence_adjusted": 19.090593924807695
+      },
+      "other_line": {
+        "candidate_count": 5748,
+        "unique_races": 1300,
+        "mean_predicted_probability": 0.1549195312848258,
+        "actual_frequency": 0.10194850382741823,
+        "expected_2nd": 890.4774658251787,
+        "actual_2nd": 586,
+        "observed_minus_expected": -304.4774658251787,
+        "z_normal_reference_not_independence_adjusted": -11.814195593210325
+      }
+    },
+    "2026julaug": {
+      "same_line": {
+        "candidate_count": 1290,
+        "unique_races": 831,
+        "mean_predicted_probability": 0.21147424057911585,
+        "actual_frequency": 0.3573643410852713,
+        "expected_2nd": 272.80177034705946,
+        "actual_2nd": 461,
+        "observed_minus_expected": 188.19822965294054,
+        "z_normal_reference_not_independence_adjusted": 14.554446926100212
+      },
+      "other_line": {
+        "candidate_count": 3980,
+        "unique_races": 892,
+        "mean_predicted_probability": 0.15557744463641715,
+        "actual_frequency": 0.10829145728643216,
+        "expected_2nd": 619.1982296529403,
+        "actual_2nd": 431,
+        "observed_minus_expected": -188.1982296529403,
+        "z_normal_reference_not_independence_adjusted": -8.790189869843665
+      }
+    },
+    "2026q1": {
+      "same_line": {
+        "candidate_count": 1868,
+        "unique_races": 1169,
+        "mean_predicted_probability": 0.20311212189667305,
+        "actual_frequency": 0.35278372591006424,
+        "expected_2nd": 379.41344370298526,
+        "actual_2nd": 659,
+        "observed_minus_expected": 279.58655629701474,
+        "z_normal_reference_not_independence_adjusted": 18.153698934898202
+      },
+      "other_line": {
+        "candidate_count": 5507,
+        "unique_races": 1242,
+        "mean_predicted_probability": 0.156634566242421,
+        "actual_frequency": 0.1058652623933176,
+        "expected_2nd": 862.5865562970125,
+        "actual_2nd": 583,
+        "observed_minus_expected": -279.5865562970125,
+        "z_normal_reference_not_independence_adjusted": -11.06578266436723
+      }
+    },
+    "2026q2": {
+      "same_line": {
+        "candidate_count": 1849,
+        "unique_races": 1196,
+        "mean_predicted_probability": 0.20572880840242055,
+        "actual_frequency": 0.3477555435370471,
+        "expected_2nd": 380.3925667360756,
+        "actual_2nd": 643,
+        "observed_minus_expected": 262.6074332639244,
+        "z_normal_reference_not_independence_adjusted": 17.01329747887657
+      },
+      "other_line": {
+        "candidate_count": 5778,
+        "unique_races": 1296,
+        "mean_predicted_probability": 0.15846442251019835,
+        "actual_frequency": 0.11301488404292143,
+        "expected_2nd": 915.607433263926,
+        "actual_2nd": 653,
+        "observed_minus_expected": -262.60743326392605,
+        "z_normal_reference_not_independence_adjusted": -10.080409669847217
+      }
+    },
+    "2026sep": {
+      "same_line": {
+        "candidate_count": 638,
+        "unique_races": 399,
+        "mean_predicted_probability": 0.20631391350754144,
+        "actual_frequency": 0.35266457680250785,
+        "expected_2nd": 131.62827681781144,
+        "actual_2nd": 225,
+        "observed_minus_expected": 93.37172318218856,
+        "z_normal_reference_not_independence_adjusted": 10.211244818839313
+      },
+      "other_line": {
+        "candidate_count": 1842,
+        "unique_races": 419,
+        "mean_predicted_probability": 0.15601070748218696,
+        "actual_frequency": 0.10532030401737243,
+        "expected_2nd": 287.37172318218836,
+        "actual_2nd": 194,
+        "observed_minus_expected": -93.37172318218836,
+        "z_normal_reference_not_independence_adjusted": -6.371213627369837
+      }
+    }
+  }
+}
