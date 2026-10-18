@@ -1,0 +1,5 @@
+# Large datasets remain in the pinned source repository
+/stage/
+*.pyc
+__pycache__/
+.venv/
