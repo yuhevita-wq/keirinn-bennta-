@@ -1,0 +1,62 @@
+name: Verify pinned 14,081 F1 S-class research cohort
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/verify-history.yml
+      - scripts/stage_history.py
+      - data/source_ledger.json
+      - config/scope_lock.json
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  stage_and_verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout dedicated research repository
+        uses: actions/checkout@v4
+        with:
+          path: project
+      - name: Checkout original dataset at adoption commit
+        uses: actions/checkout@v4
+        with:
+          repository: yuhevita-wq/keirin-market-analysis-
+          ref: 8da8f4f8e1125eb522df5546d07cd6657fab7dda
+          path: origin
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /research/benter_walkforward_v7/frozen_term_unscaled/independent_win_*.csv
+            /data/2023/s_class_f1_all_parts/*/entries.csv
+            /data/2023/s_class_f1_all_parts/*/races.csv
+            /data/2023/s_class_f1_all_parts/*/results.csv
+            /data/2024/s_class_f1_all_parts/*/entries.csv
+            /data/2024/s_class_f1_all_parts/*/races.csv
+            /data/2024/s_class_f1_all_parts/*/results.csv
+            /data/2025/s_class_f1_all_parts/*/entries.csv
+            /data/2025/s_class_f1_all_parts/*/races.csv
+            /data/2025/s_class_f1_all_parts/*/results.csv
+            /data/2026_h1/s_class_f1_all/entries.csv
+            /data/2026_h1/s_class_f1_all/races.csv
+            /data/2026_h1/s_class_f1_all/results.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/entries.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/races.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/results.csv
+            /research/benter_calibration_v4/sep_holdout/entries.csv
+            /research/benter_calibration_v4/sep_holdout/races.csv
+            /research/benter_calibration_v4/sep_holdout/results.csv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Prove data integrity and stage all eligible races
+        run: |
+          python project/scripts/stage_history.py \
+            --source-root origin \
+            --output project/stage/f1_s_class_14081.jsonl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: f1-s-class-fixed-14081-research-stage
+          path: project/stage/
+          retention-days: 7
