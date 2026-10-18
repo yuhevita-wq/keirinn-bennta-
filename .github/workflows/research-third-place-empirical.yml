@@ -1,0 +1,81 @@
+name: Observe F1 S級 actual third-place positions first
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/research-third-place-empirical.yml
+      - research/third_place_empirical.py
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: benter-f1-s-third-empirical
+  cancel-in-progress: false
+jobs:
+  observe_actual_third:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout dedicated research repo
+        uses: actions/checkout@v4
+        with:
+          path: project
+      - name: Checkout original dataset pinned at model adoption
+        uses: actions/checkout@v4
+        with:
+          repository: yuhevita-wq/keirin-market-analysis-
+          ref: 8da8f4f8e1125eb522df5546d07cd6657fab7dda
+          path: origin
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /research/benter_walkforward_v7/frozen_term_unscaled/independent_win_*.csv
+            /data/2023/s_class_f1_all_parts/*/entries.csv
+            /data/2023/s_class_f1_all_parts/*/races.csv
+            /data/2023/s_class_f1_all_parts/*/results.csv
+            /data/2024/s_class_f1_all_parts/*/entries.csv
+            /data/2024/s_class_f1_all_parts/*/races.csv
+            /data/2024/s_class_f1_all_parts/*/results.csv
+            /data/2025/s_class_f1_all_parts/*/entries.csv
+            /data/2025/s_class_f1_all_parts/*/races.csv
+            /data/2025/s_class_f1_all_parts/*/results.csv
+            /data/2026_h1/s_class_f1_all/entries.csv
+            /data/2026_h1/s_class_f1_all/races.csv
+            /data/2026_h1/s_class_f1_all/results.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/entries.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/races.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/results.csv
+            /research/benter_calibration_v4/sep_holdout/entries.csv
+            /research/benter_calibration_v4/sep_holdout/races.csv
+            /research/benter_calibration_v4/sep_holdout/results.csv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install mathematical dependencies
+        run: python -m pip install 'numpy>=1.26,<3' 'scipy>=1.11,<2'
+      - name: Restore exact 14081 F1 S-class races from original forecasts, results and lines
+        run: |
+          python -u project/scripts/stage_history.py \
+            --source-root origin \
+            --output project/stage/f1_s_class_14081.jsonl
+      - name: Census actual third finisher positions BEFORE mathematical rule fit
+        run: |
+          python -u project/research/third_place_empirical.py \
+            --input project/stage/f1_s_class_14081.jsonl \
+            --out project/reports/third_place_empirical.json
+      - name: Preserve result-first third-place residual report
+        run: |
+          set -euo pipefail
+          git -C project config user.name "github-actions[bot]"
+          git -C project config user.email "github-actions[bot]@users.noreply.github.com"
+          git -C project add reports/third_place_empirical.json
+          git -C project commit -m "Observe actual 3rd positions and Harville residuals in F1 S 14081 races [skip ci]"
+          git -C project pull --rebase origin main
+          git -C project push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        with:
+          name: f1-s-third-position-observation-14081
+          path: |
+            project/reports/third_place_empirical.json
+            project/stage/f1_s_class_14081.audit.json
+          retention-days: 30
