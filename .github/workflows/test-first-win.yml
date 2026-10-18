@@ -1,0 +1,37 @@
+name: F1 S級 independent first-win model checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify_model_and_scope:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile standalone implementation
+        run: python -m py_compile src/predict_first.py
+      - name: Run model and input tests
+        run: python -m unittest discover -s tests -v
+      - name: Check pinned source sizes
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          ledger=json.loads(Path("data/source_ledger.json").read_text())
+          lock=json.loads(Path("config/scope_lock.json").read_text())
+          manifest=json.loads(Path("models/first_win_2026sep_manifest.json").read_text())
+          assert ledger["origin_commit_sha"] == lock["source_commit_sha"]
+          assert ledger["eligible_podium_races"] == lock["all_eligible_races"] == 14081
+          assert len(ledger["forecasts"]) == 12
+          assert sum(d["target_races"] for d in ledger["forecasts"]) == 14215
+          assert manifest["period"] == "2026sep"
+          assert manifest["prediction_sha256"] == ledger["forecasts"][-1]["predicted_win_csv_sha256"]
+          print("Frozen source, 12 periods, 14,081 eligible F1 S級 races: verified")
+          PY
