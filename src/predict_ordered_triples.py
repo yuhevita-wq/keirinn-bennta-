@@ -46,6 +46,8 @@ def third_role(k,lines):
     raise ValueError("Third car not in lineup")
 
 def infer_triples(card,first_manifest,second_manifest,third_manifest):
+    if {"first","second","third"}.intersection(card):
+        raise ValueError("Observed finishing order is not a pre-race input")
     if third_manifest.get("status")!="SELECTED_RESEARCH_REFERENCE_NOT_MARKET_OR_WAGER_MODEL":
         raise ValueError("Unrecognized third conditional model")
     if third_manifest.get("scope")!="F1 S級 only":
