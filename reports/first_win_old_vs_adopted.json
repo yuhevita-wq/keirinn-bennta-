@@ -1,0 +1,109 @@
+{
+  "scope": "F1 S級 only",
+  "status": "PAIRWISE_V2_VS_UNSCALED_FOREIGN_999_FIRST_PLACE_CANDIDATE",
+  "same_scored_races": 7688,
+  "race_ids_sha256": "b1229889672487fb765990790fd5f0ae7dffaa53740a26fd2a6db74a76b8b299",
+  "all_generated_race_count": 14081,
+  "old_model": "V2 term entered continuously including special 999",
+  "new_model": "V2 term999 as unscaled 0/1 foreign category; continuous term reserved for valid term numbers",
+  "selection_history_warning": "New model family motivated by old evaluation errors, so the same evaluation range is no longer globally untouched",
+  "no_odds_used": true,
+  "V7_frozen_parameters_modified": false,
+  "raw_vs_raw": {
+    "paired": {
+      "gain_nll_positive_is_new_better": 0.008606644629264781,
+      "day_cluster_95": [
+        -0.0008030024738401811,
+        0.02010010463011647
+      ],
+      "n_days": 539
+    },
+    "per_period": {
+      "2025q2": {
+        "races": 1248,
+        "nll_gain_positive_is_new_better": -1.6154603765345208e-07
+      },
+      "2025q3": {
+        "races": 1291,
+        "nll_gain_positive_is_new_better": -1.3472984327651339e-05
+      },
+      "2025q4": {
+        "races": 1300,
+        "nll_gain_positive_is_new_better": 3.618344463077824e-06
+      },
+      "2026julaug": {
+        "races": 892,
+        "nll_gain_positive_is_new_better": 0.11041175104713623
+      },
+      "2026q1": {
+        "races": 1242,
+        "nll_gain_positive_is_new_better": 4.189837377615438e-06
+      },
+      "2026q2": {
+        "races": 1296,
+        "nll_gain_positive_is_new_better": -0.024719911301056326
+      },
+      "2026sep": {
+        "races": 419,
+        "nll_gain_positive_is_new_better": -0.0006556214121525117
+      }
+    }
+  },
+  "development_selected_calibration_vs_development_selected_calibration": {
+    "paired": {
+      "gain_nll_positive_is_new_better": 0.008082834064036041,
+      "day_cluster_95": [
+        -0.0010852298075048911,
+        0.019154952680142546
+      ],
+      "n_days": 539
+    },
+    "per_period": {
+      "2025q2": {
+        "races": 1248,
+        "nll_gain_positive_is_new_better": -1.5377232644191706e-06
+      },
+      "2025q3": {
+        "races": 1291,
+        "nll_gain_positive_is_new_better": -1.3133892409762245e-05
+      },
+      "2025q4": {
+        "races": 1300,
+        "nll_gain_positive_is_new_better": 2.176027547696362e-06
+      },
+      "2026julaug": {
+        "races": 892,
+        "nll_gain_positive_is_new_better": 0.10568414546816825
+      },
+      "2026q1": {
+        "races": 1242,
+        "nll_gain_positive_is_new_better": 4.271962181161818e-06
+      },
+      "2026q2": {
+        "races": 1296,
+        "nll_gain_positive_is_new_better": -0.024549370013059412
+      },
+      "2026sep": {
+        "races": 419,
+        "nll_gain_positive_is_new_better": -0.0007224477696372376
+      }
+    }
+  },
+  "old_calibration_selected": "high_hinge",
+  "new_calibration_selected": "high_hinge",
+  "old_first_evaluation": {
+    "races": 7688,
+    "mean_log_loss": 1.5799172146521523,
+    "mean_brier": 0.7364081461482409,
+    "top1_accuracy": 0.3861862643080125,
+    "benter_pseudo_r2_vs_uniform": 0.1828375575616792
+  },
+  "new_first_evaluation": {
+    "races": 7688,
+    "mean_log_loss": 1.571834380588097,
+    "mean_brier": 0.7353548968114283,
+    "top1_accuracy": 0.3864464099895942,
+    "benter_pseudo_r2_vs_uniform": 0.18701814902834113
+  },
+  "deferred": "No 2nd / 3rd model changes or market odds integration."
+}
