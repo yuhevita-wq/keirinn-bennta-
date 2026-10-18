@@ -362,103 +362,100 @@
       "gamma_plus_directed_line": {
         "coefficient_names": [
           "log_q",
-          "same_line",
           "directly_behind_winner",
           "ahead_of_winner",
           "later_behind_winner"
         ],
         "coefficients": [
-          0.6445860640750397,
-          0.778170929561894,
-          0.6850985203189235,
-          0.4084769507224296,
-          -0.3154045414794738
+          0.6445860534733303,
+          1.4632697998834279,
+          1.186647960053046,
+          0.4627667528374737
         ],
-        "conditional_second_log_loss": 1.3996539687686027,
+        "conditional_second_log_loss": 1.3996539709288043,
         "calendar_subgroups": {
           "2025q2": {
             "races": 1248,
-            "log_loss": 1.4130313340331244,
+            "log_loss": 1.413031339270855,
             "top1_second_accuracy": 0.47596153846153844
           },
           "2025q3": {
             "races": 1291,
-            "log_loss": 1.353171680064405,
+            "log_loss": 1.3531716709870296,
             "top1_second_accuracy": 0.5034856700232379
           },
           "2025q4": {
             "races": 1300,
-            "log_loss": 1.386751524413381,
+            "log_loss": 1.3867515237065464,
             "top1_second_accuracy": 0.4746153846153846
           },
           "2026julaug": {
             "races": 892,
-            "log_loss": 1.3988514546705557,
+            "log_loss": 1.3988514588215826,
             "top1_second_accuracy": 0.4641255605381166
           },
           "2026q1": {
             "races": 1242,
-            "log_loss": 1.421185792891391,
+            "log_loss": 1.421185797202916,
             "top1_second_accuracy": 0.47665056360708535
           },
           "2026q2": {
             "races": 1296,
-            "log_loss": 1.424560733343633,
+            "log_loss": 1.4245607442895323,
             "top1_second_accuracy": 0.4691358024691358
           },
           "2026sep": {
             "races": 419,
-            "log_loss": 1.4039045908557137,
+            "log_loss": 1.4039045895793483,
             "top1_second_accuracy": 0.4510739856801909
           }
         },
         "observed_vs_predicted_line_relation": {
           "same_line": {
             "candidate_rows": 11513,
-            "expected_second": 4180.7573932165005,
+            "expected_second": 4180.757755334465,
             "actual_second": 4136,
-            "predicted_rate": 0.36313362227191004,
+            "predicted_rate": 0.3631336537248732,
             "observed_rate": 0.3592460696603839,
-            "expected_minus_actual": 44.75739321650053
+            "expected_minus_actual": 44.7577553344654
           },
           "other_line": {
             "candidate_rows": 34007,
-            "expected_second": 3507.2426067834995,
+            "expected_second": 3507.242244665534,
             "actual_second": 3552,
-            "predicted_rate": 0.10313296106047283,
+            "predicted_rate": 0.10313295041213674,
             "observed_rate": 0.10444908401211515,
-            "expected_minus_actual": -44.75739321650053
+            "expected_minus_actual": -44.757755334465855
           },
           "directly_behind_winner": {
             "candidate_rows": 5664,
-            "expected_second": 2288.8768188031427,
+            "expected_second": 2288.8771663287125,
             "actual_second": 2238,
-            "predicted_rate": 0.4041096078395379,
+            "predicted_rate": 0.40410966919645347,
             "observed_rate": 0.3951271186440678,
-            "expected_minus_actual": 50.87681880314267
+            "expected_minus_actual": 50.87716632871252
           },
           "ahead_of_winner": {
             "candidate_rows": 3924,
-            "expected_second": 1767.8031115091783,
+            "expected_second": 1767.8031092043288,
             "actual_second": 1772,
-            "predicted_rate": 0.4505104769391382,
+            "predicted_rate": 0.4505104763517658,
             "observed_rate": 0.45158002038735984,
-            "expected_minus_actual": -4.1968884908217206
+            "expected_minus_actual": -4.196890795671152
           },
           "later_behind_winner": {
             "candidate_rows": 1925,
-            "expected_second": 124.07746290417998,
+            "expected_second": 124.07747980142472,
             "actual_second": 126,
-            "predicted_rate": 0.0644558248852883,
+            "predicted_rate": 0.06445583366307778,
             "observed_rate": 0.06545454545454546,
-            "expected_minus_actual": -1.9225370958200187
+            "expected_minus_actual": -1.9225201985752847
           }
         }
       },
       "gamma_plus_directed_and_role": {
         "coefficient_names": [
           "log_q",
-          "same_line",
           "directly_behind_winner",
           "ahead_of_winner",
           "later_behind_winner",
@@ -467,93 +464,92 @@
           "candidate_is_solo"
         ],
         "coefficients": [
-          0.6934247887472696,
-          0.7414957483955592,
-          0.6585605389907211,
-          0.5435334129858114,
-          -0.4605982035809721,
-          0.11279926251675385,
-          0.33519258376374705,
-          0.35941074789937594
+          0.693424625872126,
+          1.400056813580546,
+          1.285028776151564,
+          0.2808979395630318,
+          0.11279906620895994,
+          0.3351921073776301,
+          0.359410898221452
         ],
-        "conditional_second_log_loss": 1.398497968944497,
+        "conditional_second_log_loss": 1.3984979702557454,
         "calendar_subgroups": {
           "2025q2": {
             "races": 1248,
-            "log_loss": 1.4119541279010428,
+            "log_loss": 1.4119541293809788,
             "top1_second_accuracy": 0.47676282051282054
           },
           "2025q3": {
             "races": 1291,
-            "log_loss": 1.353056871182369,
+            "log_loss": 1.3530568616941996,
             "top1_second_accuracy": 0.5011618900077459
           },
           "2025q4": {
             "races": 1300,
-            "log_loss": 1.385345675337643,
+            "log_loss": 1.38534567239012,
             "top1_second_accuracy": 0.47615384615384615
           },
           "2026julaug": {
             "races": 892,
-            "log_loss": 1.3992187715965723,
+            "log_loss": 1.3992187768700932,
             "top1_second_accuracy": 0.4618834080717489
           },
           "2026q1": {
             "races": 1242,
-            "log_loss": 1.417825494766134,
+            "log_loss": 1.4178254986445968,
             "top1_second_accuracy": 0.4822866344605475
           },
           "2026q2": {
             "races": 1296,
-            "log_loss": 1.424193241822996,
+            "log_loss": 1.4241932543103983,
             "top1_second_accuracy": 0.4722222222222222
           },
           "2026sep": {
             "races": 419,
-            "log_loss": 1.4009331380027028,
+            "log_loss": 1.4009331346858094,
             "top1_second_accuracy": 0.45823389021479716
           }
         },
         "observed_vs_predicted_line_relation": {
           "same_line": {
             "candidate_rows": 11513,
-            "expected_second": 4168.55739322545,
+            "expected_second": 4168.557494664845,
             "actual_second": 4136,
-            "predicted_rate": 0.36207395059719016,
+            "predicted_rate": 0.362073959408047,
             "observed_rate": 0.3592460696603839,
-            "expected_minus_actual": 32.55739322545014
+            "expected_minus_actual": 32.55749466484485
           },
           "other_line": {
             "candidate_rows": 34007,
-            "expected_second": 3519.44260677455,
+            "expected_second": 3519.442505335155,
             "actual_second": 3552,
-            "predicted_rate": 0.10349171072939542,
+            "predicted_rate": 0.10349170774649794,
             "observed_rate": 0.10444908401211515,
-            "expected_minus_actual": -32.55739322545014
+            "expected_minus_actual": -32.55749466484485
           },
           "directly_behind_winner": {
             "candidate_rows": 5664,
-            "expected_second": 2282.865960285716,
+            "expected_second": 2282.866437451346,
             "actual_second": 2238,
-            "predicted_rate": 0.403048368694512,
+            "predicted_rate": 0.4030484529398563,
             "observed_rate": 0.3951271186440678,
-            "expected_minus_actual": 44.86596028571603
+            "expected_minus_actual": 44.86643745134597
           },
           "ahead_of_winner": {
             "candidate_rows": 3924,
-            "expected_second": 1761.6466828090522,
+            "expected_second": 1761.6463060784488,
             "actual_second": 1772,
-            "predicted_rate": 0.448941560348892,
+            "predicted_rate": 0.44894146434211235,
             "observed_rate": 0.45158002038735984,
-            "expected_minus_actual": -10.353317190947791
+            "expected_minus_actual": -10.353693921551212
           },
           "later_behind_winner": {
             "candidate_rows": 1925,
-            "expected_second": 124.04475013068098,
+            "expected_second": 124.04475113504962,
             "actual_second": 126,
-            "predicted_rate": 0.0644388312367174,
+            "predicted_rate": 0.06443883175846733,
             "observed_rate": 0.06545454545454546,
-            "expected_minus_actual": -1.9552498693190188
+            "expected_minus_actual": -1.9552488649503772
           }
         }
       }
@@ -768,66 +764,63 @@
       "gamma_plus_directed_line": {
         "coefficient_names": [
           "log_q",
-          "same_line",
           "directly_behind_winner",
           "ahead_of_winner",
           "later_behind_winner"
         ],
         "coefficients": [
-          0.6407565364940784,
-          0.7675054484421279,
-          0.6685205289542597,
-          0.418645643234902,
-          -0.3196607237470347
+          0.6407563020428341,
+          1.4360265199538997,
+          1.186152701168385,
+          0.4478404906759193
         ],
-        "conditional_second_log_loss": 1.3929265807078923,
+        "conditional_second_log_loss": 1.3929265807081752,
         "observed_vs_predicted_line_relation": {
           "same_line": {
             "candidate_rows": 21411,
-            "expected_second": 7694.000224518647,
+            "expected_second": 7694.0027334042,
             "actual_second": 7694,
-            "predicted_rate": 0.3593480091783965,
+            "predicted_rate": 0.35934812635580776,
             "observed_rate": 0.359347998692261,
-            "expected_minus_actual": 0.0002245186469735927
+            "expected_minus_actual": 0.0027334041997164604
           },
           "other_line": {
             "candidate_rows": 61970,
-            "expected_second": 6386.999775481353,
+            "expected_second": 6386.9972665958,
             "actual_second": 6387,
-            "predicted_rate": 0.10306599605424162,
+            "predicted_rate": 0.10306595556875585,
             "observed_rate": 0.1030659996772632,
-            "expected_minus_actual": -0.0002245186469735927
+            "expected_minus_actual": -0.0027334041997164604
           },
           "directly_behind_winner": {
             "candidate_rows": 10406,
-            "expected_second": 4133.000124278664,
+            "expected_second": 4133.0013790717185,
             "actual_second": 4133,
-            "predicted_rate": 0.39717471884284683,
+            "predicted_rate": 0.39717483942645765,
             "observed_rate": 0.39717470689986545,
-            "expected_minus_actual": 0.00012427866386133246
+            "expected_minus_actual": 0.0013790717184747336
           },
           "ahead_of_winner": {
             "candidate_rows": 7399,
-            "expected_second": 3327.0000849622147,
+            "expected_second": 3327.00223978131,
             "actual_second": 3327,
-            "predicted_rate": 0.44965537031520675,
+            "predicted_rate": 0.4496556615463319,
             "observed_rate": 0.44965535883227464,
-            "expected_minus_actual": 8.496221471432364e-05
+            "expected_minus_actual": 0.002239781309981481
           },
           "later_behind_winner": {
             "candidate_rows": 3606,
-            "expected_second": 234.00001527776897,
+            "expected_second": 233.99911455117137,
             "actual_second": 234,
-            "predicted_rate": 0.06489185115856044,
+            "predicted_rate": 0.06489160137303698,
             "observed_rate": 0.064891846921797,
-            "expected_minus_actual": 1.5277768966370786e-05
+            "expected_minus_actual": -0.0008854488286260676
           }
         }
       },
       "gamma_plus_directed_and_role": {
         "coefficient_names": [
           "log_q",
-          "same_line",
           "directly_behind_winner",
           "ahead_of_winner",
           "later_behind_winner",
@@ -836,56 +829,55 @@
           "candidate_is_solo"
         ],
         "coefficients": [
-          0.6795491751909837,
-          0.7401727109673631,
-          0.6472753731425531,
-          0.5304109851628731,
-          -0.43751364733806414,
-          0.09339126481058391,
-          0.271884991360384,
-          0.298793008211297
+          0.6795497368693789,
+          1.3874481450042593,
+          1.2705839540390533,
+          0.3026627567532329,
+          0.09339198403656705,
+          0.2718867284318643,
+          0.2987962715846704
         ],
-        "conditional_second_log_loss": 1.390941108998237,
+        "conditional_second_log_loss": 1.390941108998548,
         "observed_vs_predicted_line_relation": {
           "same_line": {
             "candidate_rows": 21411,
-            "expected_second": 7694.0000322578635,
+            "expected_second": 7694.000179960507,
             "actual_second": 7694,
-            "predicted_rate": 0.35934800019886337,
+            "predicted_rate": 0.35934800709731013,
             "observed_rate": 0.359347998692261,
-            "expected_minus_actual": 3.2257863495033234e-05
+            "expected_minus_actual": 0.00017996050701185595
           },
           "other_line": {
             "candidate_rows": 61970,
-            "expected_second": 6386.9999677421365,
+            "expected_second": 6386.999820039493,
             "actual_second": 6387,
-            "predicted_rate": 0.1030659991567232,
+            "predicted_rate": 0.1030659967732692,
             "observed_rate": 0.1030659996772632,
-            "expected_minus_actual": -3.2257863495033234e-05
+            "expected_minus_actual": -0.00017996050701185595
           },
           "directly_behind_winner": {
             "candidate_rows": 10406,
-            "expected_second": 4132.999861335777,
+            "expected_second": 4132.999762265669,
             "actual_second": 4133,
-            "predicted_rate": 0.3971746935744548,
+            "predicted_rate": 0.3971746840539755,
             "observed_rate": 0.39717470689986545,
-            "expected_minus_actual": -0.00013866422341379803
+            "expected_minus_actual": -0.00023773433076712536
           },
           "ahead_of_winner": {
             "candidate_rows": 7399,
-            "expected_second": 3327.000171378961,
+            "expected_second": 3326.9996324781796,
             "actual_second": 3327,
-            "predicted_rate": 0.44965538199472377,
+            "predicted_rate": 0.4496553091604514,
             "observed_rate": 0.44965535883227464,
-            "expected_minus_actual": 0.00017137896111307782
+            "expected_minus_actual": -0.0003675218204080011
           },
           "later_behind_winner": {
             "candidate_rows": 3606,
-            "expected_second": 233.99999954312543,
+            "expected_second": 234.00078521665853,
             "actual_second": 234,
-            "predicted_rate": 0.06489184679509856,
+            "predicted_rate": 0.06489206467461413,
             "observed_rate": 0.064891846921797,
-            "expected_minus_actual": -4.568745737287827e-07
+            "expected_minus_actual": 0.0007852166585280429
           }
         }
       }
@@ -893,26 +885,26 @@
   },
   "paired_day_cluster_on_chronological_check": {
     "gamma_plus_directed_line_OVER_gamma_plus_same_line": {
-      "mean_improvement_positive_is_second_model_better": 0.009741714025997038,
+      "mean_improvement_positive_is_second_model_better": 0.009741711865795536,
       "day_cluster_bootstrap_95_interval": [
-        0.00655494507985594,
-        0.012772454037707218
+        0.006554940549020827,
+        0.01277245215717346
       ],
       "days": 539
     },
     "gamma_plus_directed_and_role_OVER_gamma_plus_same_line": {
-      "mean_improvement_positive_is_second_model_better": 0.010897713850102794,
+      "mean_improvement_positive_is_second_model_better": 0.010897712538854071,
       "day_cluster_bootstrap_95_interval": [
-        0.007418846539384992,
-        0.014604748679746926
+        0.007418841383523512,
+        0.014604744613661604
       ],
       "days": 539
     },
     "gamma_plus_directed_and_role_OVER_gamma_plus_directed_line": {
-      "mean_improvement_positive_is_second_model_better": 0.0011559998241057552,
+      "mean_improvement_positive_is_second_model_better": 0.0011560006730585344,
       "day_cluster_bootstrap_95_interval": [
-        -0.0007188171026565374,
-        0.003049582972346772
+        -0.0007188173936363439,
+        0.003049582927857706
       ],
       "days": 539
     },

@@ -1,7 +1,7 @@
 {
   "research_stage": "CONDITIONAL_SECOND_MLE_AFTER_EMPIRICAL_AUDIT",
   "scope": "F1 S級 only",
-  "equation": "P(j second | i first) = exp(gamma*log(q_j) + a*same_line + b*directly_behind + c*ahead + d*later_behind + candidate_role_adjustments) / sum_{h != i} exp(same(h)). Candidate families use different subsets of these terms.",
+  "equation": "P(second=j | first=i) = q_j^gamma * exp(A*directly_behind + B*ahead_of_winner + C*later_behind_winner + role_adjustments) / sum_{h != i}(q_h^gamma * exp(A*directly_behind(h) + B*ahead(h) + C*later_behind(h) + role_adjustments(h))). A, B, C are mutually exclusive line-position effects; the simpler same-line family substitutes one common term.",
   "race_count": 14081,
   "second_candidate_rows": 83381,
   "result_conditioned_on_actual_first": true,
@@ -1389,34 +1389,31 @@
     "gamma_plus_directed_line": {
       "coefficient_names": [
         "log_q",
-        "same_line",
         "directly_behind_winner",
         "ahead_of_winner",
         "later_behind_winner"
       ],
       "development_fitted_coefficients": [
-        0.6445860640750397,
-        0.778170929561894,
-        0.6850985203189235,
-        0.4084769507224296,
-        -0.3154045414794738
+        0.6445860534733303,
+        1.4632697998834279,
+        1.186647960053046,
+        0.4627667528374737
       ],
       "all_14081_fitted_coefficients": [
-        0.6407565364940784,
-        0.7675054484421279,
-        0.6685205289542597,
-        0.418645643234902,
-        -0.3196607237470347
+        0.6407563020428341,
+        1.4360265199538997,
+        1.186152701168385,
+        0.4478404906759193
       ],
       "development_fit": {
         "races": 6393,
-        "conditional_second_log_loss": 1.384947123828921,
+        "conditional_second_log_loss": 1.3849471238289126,
         "top_candidate_second_accuracy": 0.4897544188956671,
         "reference_uniform_log_loss": 1.7771641203519508
       },
       "chronological_check": {
         "races": 7688,
-        "conditional_second_log_loss": 1.3996539687686027,
+        "conditional_second_log_loss": 1.3996539709288043,
         "top_candidate_second_accuracy": 0.47658688865764826,
         "reference_uniform_log_loss": 1.7769052925785511,
         "calibration_by_predicted_probability": [
@@ -1426,9 +1423,9 @@
               0.01
             ],
             "candidates": 105,
-            "mean_predicted": 0.002371091010283128,
+            "mean_predicted": 0.0023710906892769725,
             "actual_second_rate": 0.0380952380952381,
-            "expected_second": 0.24896455607972848,
+            "expected_second": 0.24896452237408212,
             "actual_second": 4
           },
           {
@@ -1437,9 +1434,9 @@
               0.025
             ],
             "candidates": 1189,
-            "mean_predicted": 0.02015953474331563,
+            "mean_predicted": 0.0201595320482116,
             "actual_second_rate": 0.021026072329688814,
-            "expected_second": 23.969686809802283,
+            "expected_second": 23.969683605323592,
             "actual_second": 25
           },
           {
@@ -1448,9 +1445,9 @@
               0.05
             ],
             "candidates": 6770,
-            "mean_predicted": 0.03884721046417023,
+            "mean_predicted": 0.038847206304610804,
             "actual_second_rate": 0.030576070901033973,
-            "expected_second": 262.9956148424325,
+            "expected_second": 262.99558668221516,
             "actual_second": 207
           },
           {
@@ -1459,9 +1456,9 @@
               0.075
             ],
             "candidates": 7756,
-            "mean_predicted": 0.062270161295312806,
+            "mean_predicted": 0.062270155050390505,
             "actual_second_rate": 0.058793192367199584,
-            "expected_second": 482.9673710064461,
+            "expected_second": 482.96732257082874,
             "actual_second": 456
           },
           {
@@ -1470,9 +1467,9 @@
               0.1
             ],
             "candidates": 6086,
-            "mean_predicted": 0.08713663851038997,
+            "mean_predicted": 0.08713662992680381,
             "actual_second_rate": 0.09743674005915215,
-            "expected_second": 530.3135819742333,
+            "expected_second": 530.313529734528,
             "actual_second": 593
           },
           {
@@ -1481,9 +1478,9 @@
               0.15
             ],
             "candidates": 8038,
-            "mean_predicted": 0.12241704148258596,
+            "mean_predicted": 0.12241703265054103,
             "actual_second_rate": 0.12440905697934809,
-            "expected_second": 983.9881794370259,
+            "expected_second": 983.9881084450489,
             "actual_second": 1000
           },
           {
@@ -1492,9 +1489,9 @@
               0.2
             ],
             "candidates": 4394,
-            "mean_predicted": 0.17252327769277184,
+            "mean_predicted": 0.1725232724051795,
             "actual_second_rate": 0.18161128812016386,
-            "expected_second": 758.0672821820394,
+            "expected_second": 758.0672589483587,
             "actual_second": 798
           },
           {
@@ -1503,9 +1500,9 @@
               0.25
             ],
             "candidates": 2416,
-            "mean_predicted": 0.22225460520691612,
+            "mean_predicted": 0.22225460318958942,
             "actual_second_rate": 0.24379139072847683,
-            "expected_second": 536.9671261799093,
+            "expected_second": 536.967121306048,
             "actual_second": 589
           },
           {
@@ -1514,9 +1511,9 @@
               0.3
             ],
             "candidates": 1370,
-            "mean_predicted": 0.27312516667347847,
+            "mean_predicted": 0.27312517099051237,
             "actual_second_rate": 0.27226277372262775,
-            "expected_second": 374.1814783426655,
+            "expected_second": 374.18148425700196,
             "actual_second": 373
           },
           {
@@ -1525,9 +1522,9 @@
               0.4
             ],
             "candidates": 1958,
-            "mean_predicted": 0.3485540379497532,
+            "mean_predicted": 0.34855405706248577,
             "actual_second_rate": 0.34882533197139937,
-            "expected_second": 682.4688063056168,
+            "expected_second": 682.4688437283471,
             "actual_second": 683
           },
           {
@@ -1536,9 +1533,9 @@
               0.5
             ],
             "candidates": 1823,
-            "mean_predicted": 0.44862466333025885,
+            "mean_predicted": 0.4486246943171402,
             "actual_second_rate": 0.44980800877674165,
-            "expected_second": 817.8427612510619,
+            "expected_second": 817.8428177401465,
             "actual_second": 820
           },
           {
@@ -1547,9 +1544,9 @@
               0.6
             ],
             "candidates": 1720,
-            "mean_predicted": 0.5478700666369359,
+            "mean_predicted": 0.5478701027417225,
             "actual_second_rate": 0.5343023255813953,
-            "expected_second": 942.3365146155297,
+            "expected_second": 942.3365767157627,
             "actual_second": 919
           },
           {
@@ -1558,9 +1555,9 @@
               0.7
             ],
             "candidates": 1249,
-            "mean_predicted": 0.6452737855182757,
+            "mean_predicted": 0.64527382123878,
             "actual_second_rate": 0.6325060048038431,
-            "expected_second": 805.9469581123265,
+            "expected_second": 805.9470027272362,
             "actual_second": 790
           },
           {
@@ -1569,16 +1566,16 @@
               1.0
             ],
             "candidates": 646,
-            "mean_predicted": 0.7518663690167661,
+            "mean_predicted": 0.7518664071467185,
             "actual_second_rate": 0.6671826625386997,
-            "expected_second": 485.7056743848309,
+            "expected_second": 485.70569901678016,
             "actual_second": 431
           }
         ]
       },
       "all_races_description_in_sample": {
         "races": 14081,
-        "conditional_second_log_loss": 1.3929265807078923,
+        "conditional_second_log_loss": 1.3929265807081752,
         "top_candidate_second_accuracy": 0.4821390526241034,
         "reference_uniform_log_loss": 1.7770228045418595,
         "calibration_by_predicted_probability": [
@@ -1588,9 +1585,9 @@
               0.01
             ],
             "candidates": 178,
-            "mean_predicted": 0.0020217655890271253,
+            "mean_predicted": 0.0020217662771035727,
             "actual_second_rate": 0.033707865168539325,
-            "expected_second": 0.3598742748468283,
+            "expected_second": 0.35987439732443594,
             "actual_second": 6
           },
           {
@@ -1599,9 +1596,9 @@
               0.025
             ],
             "candidates": 2070,
-            "mean_predicted": 0.020038445954476573,
+            "mean_predicted": 0.020038445613883276,
             "actual_second_rate": 0.017391304347826087,
-            "expected_second": 41.4795831257665,
+            "expected_second": 41.47958242073838,
             "actual_second": 36
           },
           {
@@ -1610,9 +1607,9 @@
               0.05
             ],
             "candidates": 12246,
-            "mean_predicted": 0.03872507083104818,
+            "mean_predicted": 0.03872505331332295,
             "actual_second_rate": 0.03192879307528989,
-            "expected_second": 474.22721739701603,
+            "expected_second": 474.22700287495286,
             "actual_second": 391
           },
           {
@@ -1621,9 +1618,9 @@
               0.075
             ],
             "candidates": 14202,
-            "mean_predicted": 0.06222130279498291,
+            "mean_predicted": 0.06222126263509176,
             "actual_second_rate": 0.05759752147584847,
-            "expected_second": 883.6669422943473,
+            "expected_second": 883.6663719435733,
             "actual_second": 818
           },
           {
@@ -1632,9 +1629,9 @@
               0.1
             ],
             "candidates": 11191,
-            "mean_predicted": 0.08704330480083597,
+            "mean_predicted": 0.08704325580303514,
             "actual_second_rate": 0.09239567509605934,
-            "expected_second": 974.1016240261554,
+            "expected_second": 974.1010756917663,
             "actual_second": 1034
           },
           {
@@ -1643,9 +1640,9 @@
               0.15
             ],
             "candidates": 14907,
-            "mean_predicted": 0.12242832942260383,
+            "mean_predicted": 0.12242827595807161,
             "actual_second_rate": 0.1249077614543503,
-            "expected_second": 1825.0391067027554,
+            "expected_second": 1825.0383097069735,
             "actual_second": 1862
           },
           {
@@ -1654,9 +1651,9 @@
               0.2
             ],
             "candidates": 8113,
-            "mean_predicted": 0.1722670800513205,
+            "mean_predicted": 0.17226701812685333,
             "actual_second_rate": 0.18131394058917785,
-            "expected_second": 1397.6028204563631,
+            "expected_second": 1397.602318063161,
             "actual_second": 1471
           },
           {
@@ -1665,9 +1662,9 @@
               0.25
             ],
             "candidates": 4401,
-            "mean_predicted": 0.22228686014137275,
+            "mean_predicted": 0.22228679975034768,
             "actual_second_rate": 0.23949102476709838,
-            "expected_second": 978.2844714821815,
+            "expected_second": 978.2842057012801,
             "actual_second": 1054
           },
           {
@@ -1676,9 +1673,9 @@
               0.3
             ],
             "candidates": 2521,
-            "mean_predicted": 0.273290663297168,
+            "mean_predicted": 0.2732906611925975,
             "actual_second_rate": 0.2653708845696152,
-            "expected_second": 688.9657621721606,
+            "expected_second": 688.9657568665383,
             "actual_second": 669
           },
           {
@@ -1687,9 +1684,9 @@
               0.4
             ],
             "candidates": 3616,
-            "mean_predicted": 0.3485461017561251,
+            "mean_predicted": 0.34854626715462633,
             "actual_second_rate": 0.351216814159292,
-            "expected_second": 1260.3427039501485,
+            "expected_second": 1260.3433020311288,
             "actual_second": 1270
           },
           {
@@ -1698,9 +1695,9 @@
               0.5
             ],
             "candidates": 3408,
-            "mean_predicted": 0.44962894451680413,
+            "mean_predicted": 0.44962919134203994,
             "actual_second_rate": 0.4448356807511737,
-            "expected_second": 1532.3354429132685,
+            "expected_second": 1532.336284093672,
             "actual_second": 1516
           },
           {
@@ -1709,9 +1706,9 @@
               0.6
             ],
             "candidates": 3144,
-            "mean_predicted": 0.5479822036312059,
+            "mean_predicted": 0.547982449487946,
             "actual_second_rate": 0.5423027989821882,
-            "expected_second": 1722.8560482165112,
+            "expected_second": 1722.8568211901024,
             "actual_second": 1705
           },
           {
@@ -1720,9 +1717,9 @@
               0.7
             ],
             "candidates": 2257,
-            "mean_predicted": 0.6449165960720685,
+            "mean_predicted": 0.6449168128508579,
             "actual_second_rate": 0.6486486486486487,
-            "expected_second": 1455.5767573346586,
+            "expected_second": 1455.5772466043863,
             "actual_second": 1464
           },
           {
@@ -1731,15 +1728,15 @@
               1.0
             ],
             "candidates": 1127,
-            "mean_predicted": 0.7508089136236211,
+            "mean_predicted": 0.7508090935354054,
             "actual_second_rate": 0.6965394853593612,
-            "expected_second": 846.161645653821,
+            "expected_second": 846.1618484144019,
             "actual_second": 785
           }
         ]
       },
-      "parameter_count": 5,
-      "all_data_BIC": 39275.361274145245
+      "parameter_count": 4,
+      "all_data_BIC": 39265.8086925033
     },
     "gamma_plus_candidate_role": {
       "coefficient_names": [
@@ -2099,7 +2096,6 @@
     "gamma_plus_directed_and_role": {
       "coefficient_names": [
         "log_q",
-        "same_line",
         "directly_behind_winner",
         "ahead_of_winner",
         "later_behind_winner",
@@ -2108,34 +2104,32 @@
         "candidate_is_solo"
       ],
       "development_fitted_coefficients": [
-        0.6934247887472696,
-        0.7414957483955592,
-        0.6585605389907211,
-        0.5435334129858114,
-        -0.4605982035809721,
-        0.11279926251675385,
-        0.33519258376374705,
-        0.35941074789937594
+        0.693424625872126,
+        1.400056813580546,
+        1.285028776151564,
+        0.2808979395630318,
+        0.11279906620895994,
+        0.3351921073776301,
+        0.359410898221452
       ],
       "all_14081_fitted_coefficients": [
-        0.6795491751909837,
-        0.7401727109673631,
-        0.6472753731425531,
-        0.5304109851628731,
-        -0.43751364733806414,
-        0.09339126481058391,
-        0.271884991360384,
-        0.298793008211297
+        0.6795497368693789,
+        1.3874481450042593,
+        1.2705839540390533,
+        0.3026627567532329,
+        0.09339198403656705,
+        0.2718867284318643,
+        0.2987962715846704
       ],
       "development_fit": {
         "races": 6393,
-        "conditional_second_log_loss": 1.3821494419707951,
+        "conditional_second_log_loss": 1.3821494419708291,
         "top_candidate_second_accuracy": 0.4891287345534178,
         "reference_uniform_log_loss": 1.7771641203519508
       },
       "chronological_check": {
         "races": 7688,
-        "conditional_second_log_loss": 1.398497968944497,
+        "conditional_second_log_loss": 1.3984979702557454,
         "top_candidate_second_accuracy": 0.4781477627471384,
         "reference_uniform_log_loss": 1.7769052925785511,
         "calibration_by_predicted_probability": [
@@ -2145,9 +2139,9 @@
               0.01
             ],
             "candidates": 105,
-            "mean_predicted": 0.002179764116913851,
+            "mean_predicted": 0.002179765394412648,
             "actual_second_rate": 0.0380952380952381,
-            "expected_second": 0.22887523227595435,
+            "expected_second": 0.22887536641332806,
             "actual_second": 4
           },
           {
@@ -2156,9 +2150,9 @@
               0.025
             ],
             "candidates": 1207,
-            "mean_predicted": 0.02004919244085582,
+            "mean_predicted": 0.020049198168346855,
             "actual_second_rate": 0.014913007456503728,
-            "expected_second": 24.199375276112974,
+            "expected_second": 24.199382189194655,
             "actual_second": 18
           },
           {
@@ -2167,9 +2161,9 @@
               0.05
             ],
             "candidates": 6934,
-            "mean_predicted": 0.038843365095220315,
+            "mean_predicted": 0.03884337162463752,
             "actual_second_rate": 0.03446783963080473,
-            "expected_second": 269.3398935702577,
+            "expected_second": 269.33993884523653,
             "actual_second": 239
           },
           {
@@ -2178,9 +2172,9 @@
               0.075
             ],
             "candidates": 7821,
-            "mean_predicted": 0.06220902589789726,
+            "mean_predicted": 0.06220903164390786,
             "actual_second_rate": 0.058432425521033116,
-            "expected_second": 486.53679154745447,
+            "expected_second": 486.53683648700337,
             "actual_second": 457
           },
           {
@@ -2189,9 +2183,9 @@
               0.1
             ],
             "candidates": 5943,
-            "mean_predicted": 0.08696488165633862,
+            "mean_predicted": 0.08696488540303939,
             "actual_second_rate": 0.09271411744909978,
-            "expected_second": 516.8322916836204,
+            "expected_second": 516.832313950263,
             "actual_second": 551
           },
           {
@@ -2200,9 +2194,9 @@
               0.15
             ],
             "candidates": 7829,
-            "mean_predicted": 0.12247403770537417,
+            "mean_predicted": 0.12247404062222468,
             "actual_second_rate": 0.1242815174351769,
-            "expected_second": 958.8492411953744,
+            "expected_second": 958.8492640313971,
             "actual_second": 973
           },
           {
@@ -2211,9 +2205,9 @@
               0.2
             ],
             "candidates": 4253,
-            "mean_predicted": 0.17322472291629284,
+            "mean_predicted": 0.1732247255436695,
             "actual_second_rate": 0.18739713143663297,
-            "expected_second": 736.7247465629935,
+            "expected_second": 736.7247577372264,
             "actual_second": 797
           },
           {
@@ -2222,9 +2216,9 @@
               0.25
             ],
             "candidates": 2490,
-            "mean_predicted": 0.22296985325078814,
+            "mean_predicted": 0.22296985269984065,
             "actual_second_rate": 0.2325301204819277,
-            "expected_second": 555.1949345944624,
+            "expected_second": 555.1949332226033,
             "actual_second": 579
           },
           {
@@ -2233,9 +2227,9 @@
               0.3
             ],
             "candidates": 1511,
-            "mean_predicted": 0.2733290699647676,
+            "mean_predicted": 0.27332906195401446,
             "actual_second_rate": 0.25876902713434813,
-            "expected_second": 413.0002247167638,
+            "expected_second": 413.00021261251584,
             "actual_second": 391
           },
           {
@@ -2244,9 +2238,9 @@
               0.4
             ],
             "candidates": 2130,
-            "mean_predicted": 0.34729829054288697,
+            "mean_predicted": 0.3472982799404192,
             "actual_second_rate": 0.36901408450704226,
-            "expected_second": 739.7453588563492,
+            "expected_second": 739.7453362730928,
             "actual_second": 786
           },
           {
@@ -2255,9 +2249,9 @@
               0.5
             ],
             "candidates": 1784,
-            "mean_predicted": 0.448872338707926,
+            "mean_predicted": 0.44887232007875794,
             "actual_second_rate": 0.4428251121076233,
-            "expected_second": 800.78825225494,
+            "expected_second": 800.7882190205041,
             "actual_second": 790
           },
           {
@@ -2266,9 +2260,9 @@
               0.6
             ],
             "candidates": 1622,
-            "mean_predicted": 0.5482424255613647,
+            "mean_predicted": 0.5482423999168856,
             "actual_second_rate": 0.5450061652281134,
-            "expected_second": 889.2492142605336,
+            "expected_second": 889.2491726651886,
             "actual_second": 884
           },
           {
@@ -2277,9 +2271,9 @@
               0.7
             ],
             "candidates": 1209,
-            "mean_predicted": 0.6466046455128285,
+            "mean_predicted": 0.6466046163463387,
             "actual_second_rate": 0.6277915632754343,
-            "expected_second": 781.7450164250097,
+            "expected_second": 781.7449811627234,
             "actual_second": 759
           },
           {
@@ -2288,16 +2282,16 @@
               1.0
             ],
             "candidates": 682,
-            "mean_predicted": 0.7559615598590207,
+            "mean_predicted": 0.7559615490273276,
             "actual_second_rate": 0.6744868035190615,
-            "expected_second": 515.5657838238521,
+            "expected_second": 515.5657764366374,
             "actual_second": 460
           }
         ]
       },
       "all_races_description_in_sample": {
         "races": 14081,
-        "conditional_second_log_loss": 1.390941108998237,
+        "conditional_second_log_loss": 1.390941108998548,
         "top_candidate_second_accuracy": 0.4830622825083446,
         "reference_uniform_log_loss": 1.7770228045418595,
         "calibration_by_predicted_probability": [
@@ -2307,9 +2301,9 @@
               0.01
             ],
             "candidates": 180,
-            "mean_predicted": 0.001977961729655954,
+            "mean_predicted": 0.0019779577419538016,
             "actual_second_rate": 0.03333333333333333,
-            "expected_second": 0.35603311133807175,
+            "expected_second": 0.3560323935516843,
             "actual_second": 6
           },
           {
@@ -2317,10 +2311,10 @@
               0.01,
               0.025
             ],
-            "candidates": 2073,
-            "mean_predicted": 0.020119535115648547,
-            "actual_second_rate": 0.01447178002894356,
-            "expected_second": 41.70779629473944,
+            "candidates": 2074,
+            "mean_predicted": 0.0201218695115339,
+            "actual_second_rate": 0.01446480231436837,
+            "expected_second": 41.732757366921305,
             "actual_second": 30
           },
           {
@@ -2328,10 +2322,10 @@
               0.025,
               0.05
             ],
-            "candidates": 12518,
-            "mean_predicted": 0.038862723670855616,
-            "actual_second_rate": 0.034190765297970924,
-            "expected_second": 486.4835749117706,
+            "candidates": 12517,
+            "mean_predicted": 0.0388638186952937,
+            "actual_second_rate": 0.034193496844291765,
+            "expected_second": 486.4584186089912,
             "actual_second": 428
           },
           {
@@ -2340,9 +2334,9 @@
               0.075
             ],
             "candidates": 14367,
-            "mean_predicted": 0.06216534733404382,
+            "mean_predicted": 0.0621653448956742,
             "actual_second_rate": 0.05804969722280225,
-            "expected_second": 893.1295451482076,
+            "expected_second": 893.1295101161512,
             "actual_second": 834
           },
           {
@@ -2351,9 +2345,9 @@
               0.1
             ],
             "candidates": 11057,
-            "mean_predicted": 0.08683696079984224,
+            "mean_predicted": 0.08683695810289428,
             "actual_second_rate": 0.0881794338428145,
-            "expected_second": 960.1562755638556,
+            "expected_second": 960.156245743702,
             "actual_second": 975
           },
           {
@@ -2362,9 +2356,9 @@
               0.15
             ],
             "candidates": 14526,
-            "mean_predicted": 0.12247095918425634,
+            "mean_predicted": 0.12247096291351847,
             "actual_second_rate": 0.1258433154343935,
-            "expected_second": 1779.0131531105076,
+            "expected_second": 1779.0132072817694,
             "actual_second": 1828
           },
           {
@@ -2373,9 +2367,9 @@
               0.2
             ],
             "candidates": 7846,
-            "mean_predicted": 0.17274884853300565,
+            "mean_predicted": 0.1727488733469084,
             "actual_second_rate": 0.18200356869742543,
-            "expected_second": 1355.3874655899624,
+            "expected_second": 1355.3876602798432,
             "actual_second": 1428
           },
           {
@@ -2384,9 +2378,9 @@
               0.25
             ],
             "candidates": 4479,
-            "mean_predicted": 0.22268877369756632,
+            "mean_predicted": 0.22268882470958223,
             "actual_second_rate": 0.23621344050011164,
-            "expected_second": 997.4230173913995,
+            "expected_second": 997.4232458742189,
             "actual_second": 1058
           },
           {
@@ -2395,9 +2389,9 @@
               0.3
             ],
             "candidates": 2732,
-            "mean_predicted": 0.27307693123545373,
+            "mean_predicted": 0.27307696538134263,
             "actual_second_rate": 0.26281112737920936,
-            "expected_second": 746.0461761352595,
+            "expected_second": 746.0462694218281,
             "actual_second": 718
           },
           {
@@ -2406,9 +2400,9 @@
               0.4
             ],
             "candidates": 3846,
-            "mean_predicted": 0.34741594162966044,
+            "mean_predicted": 0.3474159037128718,
             "actual_second_rate": 0.36167446697867917,
-            "expected_second": 1336.161711507674,
+            "expected_second": 1336.1615656797048,
             "actual_second": 1391
           },
           {
@@ -2417,9 +2411,9 @@
               0.5
             ],
             "candidates": 3296,
-            "mean_predicted": 0.44942464263754595,
+            "mean_predicted": 0.4494245835206545,
             "actual_second_rate": 0.4429611650485437,
-            "expected_second": 1481.3036221333514,
+            "expected_second": 1481.3034272840773,
             "actual_second": 1460
           },
           {
@@ -2428,9 +2422,9 @@
               0.6
             ],
             "candidates": 3036,
-            "mean_predicted": 0.5476950134714581,
+            "mean_predicted": 0.5476949923252465,
             "actual_second_rate": 0.5444664031620553,
-            "expected_second": 1662.8020608993468,
+            "expected_second": 1662.8019966994486,
             "actual_second": 1653
           },
           {
@@ -2439,9 +2433,9 @@
               0.7
             ],
             "candidates": 2217,
-            "mean_predicted": 0.6451837879120239,
+            "mean_predicted": 0.6451838061646932,
             "actual_second_rate": 0.6445647271087055,
-            "expected_second": 1430.372457800957,
+            "expected_second": 1430.3724982671247,
             "actual_second": 1429
           },
           {
@@ -2450,21 +2444,22 @@
               1.0
             ],
             "candidates": 1208,
-            "mean_predicted": 0.7538552238424093,
+            "mean_predicted": 0.7538552690253871,
             "actual_second_rate": 0.6978476821192053,
-            "expected_second": 910.6571104016305,
+            "expected_second": 910.6571649826676,
             "actual_second": 843
           }
         ]
       },
-      "parameter_count": 8,
-      "all_data_BIC": 39248.10416480769
+      "parameter_count": 7,
+      "all_data_BIC": 39238.551583166525
     }
   },
   "notes": [
     "Fit over entire eligible 14081 races is for empirical rule discovery. Fit on development and evaluate on later interval is a generalization diagnostic, not a globally virgin test.",
     "No candidate is imposed as true before comparing residuals and predicted vs actual; no 3rd-place or wager model chosen.",
     "Market odds not used. No claim of positive expected value.",
+    "same_line = directly_behind + ahead_of_winner + later_behind_winner; including all four in one equation would produce non-identifiable coefficients. Directed candidates use the three mutually exclusive directed categories WITHOUT a redundant same_line indicator.",
     "For 2024-2025Q1 the 1st-win calibrator has seen development labels. Interpretation is retrospective descriptive."
   ],
   "pairwise_check_improvement_over_harville": {
@@ -2493,10 +2488,10 @@
       "days": 539
     },
     "gamma_plus_directed_line": {
-      "mean_improvement_positive_is_second_model_better": 0.1881696707738672,
+      "mean_improvement_positive_is_second_model_better": 0.1881696686136657,
       "day_cluster_bootstrap_95_interval": [
-        0.1721525322176684,
-        0.20445085385431583
+        0.17215252814136095,
+        0.20445085448904177
       ],
       "days": 539
     },
@@ -2509,10 +2504,10 @@
       "days": 539
     },
     "gamma_plus_directed_and_role": {
-      "mean_improvement_positive_is_second_model_better": 0.18932567059797298,
+      "mean_improvement_positive_is_second_model_better": 0.18932566928672426,
       "day_cluster_bootstrap_95_interval": [
-        0.17294905785634843,
-        0.20568317817434295
+        0.1729490532624179,
+        0.2056831771607948
       ],
       "days": 539
     }
