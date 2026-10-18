@@ -1,0 +1,16 @@
+{
+  "status": "SUCCESS_REPRODUCED_ON_NEW_REPO_ACTIONS",
+  "validation_run": "https://github.com/yuhevita-wq/keirinn-bennta-/actions/runs/39097341454",
+  "origin_commit_sha": "8da8f4f8e1125eb522df5546d07cd6657fab7dda",
+  "generated_local_file": "stage/f1_s_class_14081.jsonl",
+  "generated_local_file_sha256": "0a4d67c39dcfda58f10f75df4bedd2af9dc2e6c282534abf8d889de3510852ee",
+  "eligible_races": 14081,
+  "rejected_missing_or_ambiguous_podium": 134,
+  "development_count": 6393,
+  "chronological_count": 7688,
+  "second_candidate_rows": 83381,
+  "third_candidate_rows": 69300,
+  "artifact_name": "f1-s-class-fixed-14081-research-stage",
+  "artifact_retention_days": 7,
+  "note": "Artifacts temporary; regenerated from pinned old Git commit. Historical racecards are retrospective."
+}
