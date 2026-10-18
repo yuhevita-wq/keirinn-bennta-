@@ -1,0 +1,1090 @@
+{
+  "status": "THIRD_PLACE_RESULT_FIRST_EMPIRICAL_ONLY",
+  "scope": "F1 S級 only",
+  "races": 14081,
+  "third_candidate_rows": 69300,
+  "field_sizes": {
+    "5": 148,
+    "6": 809,
+    "7": 13124
+  },
+  "observed_first_second_configuration_races": {
+    "first_second_same_line": 7694,
+    "first_second_different_lines": 6387
+  },
+  "baseline_equation": "P(third=k | actual first=i, actual second=j)=q_k/(1-q_i-q_j)",
+  "no_3rd_coefficients_fitted": true,
+  "whole": {
+    "candidates": 69300,
+    "races_with_candidate": 14081,
+    "observed": 14081,
+    "expected": 14081.000000000076,
+    "actual_rate": 0.2031890331890332,
+    "harville_rate": 0.20318903318903428,
+    "observed_minus_expected": -7.639755494892597e-11
+  },
+  "by_configuration": {
+    "first_second_different_lines": {
+      "candidates": 31457,
+      "races_with_candidate": 6387,
+      "observed": 6387,
+      "expected": 6387.000000000012,
+      "actual_rate": 0.20303906920558223,
+      "harville_rate": 0.2030390692055826,
+      "observed_minus_expected": -1.1823431123048067e-11
+    },
+    "first_second_same_line": {
+      "candidates": 37843,
+      "races_with_candidate": 7694,
+      "observed": 7694,
+      "expected": 7694.000000000003,
+      "actual_rate": 0.20331369077504427,
+      "harville_rate": 0.20331369077504433,
+      "observed_minus_expected": -2.7284841053187847e-12
+    }
+  },
+  "by_relation": {
+    "first_line_only": {
+      "candidates": 8211,
+      "races_with_candidate": 5641,
+      "observed": 2257,
+      "expected": 1879.3207818102433,
+      "actual_rate": 0.27487516745828766,
+      "harville_rate": 0.22887842915725773,
+      "observed_minus_expected": 377.67921818975674
+    },
+    "line_of_both": {
+      "candidates": 5506,
+      "races_with_candidate": 5041,
+      "observed": 2539,
+      "expected": 910.5422771644801,
+      "actual_rate": 0.46113330911732653,
+      "harville_rate": 0.16537273468297858,
+      "observed_minus_expected": 1628.45772283552
+    },
+    "neither_line": {
+      "candidates": 47451,
+      "races_with_candidate": 13843,
+      "observed": 7286,
+      "expected": 9515.117803525534,
+      "actual_rate": 0.15354787043476428,
+      "harville_rate": 0.20052512704738645,
+      "observed_minus_expected": -2229.1178035255343
+    },
+    "second_line_only": {
+      "candidates": 8132,
+      "races_with_candidate": 5697,
+      "observed": 1999,
+      "expected": 1776.0191374996766,
+      "actual_rate": 0.2458189867191343,
+      "harville_rate": 0.2183988117928771,
+      "observed_minus_expected": 222.98086250032338
+    }
+  },
+  "by_direction": {
+    "ahead_of_both": {
+      "candidates": 1033,
+      "races_with_candidate": 1026,
+      "observed": 481,
+      "expected": 365.1971660108068,
+      "actual_rate": 0.46563407550822844,
+      "harville_rate": 0.3535306544151082,
+      "observed_minus_expected": 115.80283398919318
+    },
+    "ahead_of_first": {
+      "candidates": 2941,
+      "races_with_candidate": 2783,
+      "observed": 848,
+      "expected": 881.4144110964655,
+      "actual_rate": 0.2883373002380143,
+      "harville_rate": 0.29969888170570064,
+      "observed_minus_expected": -33.41441109646553
+    },
+    "ahead_of_second": {
+      "candidates": 3365,
+      "races_with_candidate": 3080,
+      "observed": 799,
+      "expected": 970.2933700916235,
+      "actual_rate": 0.23744427934621098,
+      "harville_rate": 0.28834869839275584,
+      "observed_minus_expected": -171.2933700916235
+    },
+    "behind_both": {
+      "candidates": 4120,
+      "races_with_candidate": 3851,
+      "observed": 1895,
+      "expected": 410.9797983584534,
+      "actual_rate": 0.45995145631067963,
+      "harville_rate": 0.09975237824234306,
+      "observed_minus_expected": 1484.0202016415465
+    },
+    "between_first_second": {
+      "candidates": 353,
+      "races_with_candidate": 324,
+      "observed": 163,
+      "expected": 134.36531279521847,
+      "actual_rate": 0.46175637393767704,
+      "harville_rate": 0.38063827987314014,
+      "observed_minus_expected": 28.634687204781528
+    },
+    "further_behind_first": {
+      "candidates": 1183,
+      "races_with_candidate": 1113,
+      "observed": 114,
+      "expected": 76.8237675058079,
+      "actual_rate": 0.09636517328825021,
+      "harville_rate": 0.06493978656450371,
+      "observed_minus_expected": 37.17623249419211
+    },
+    "further_behind_second": {
+      "candidates": 948,
+      "races_with_candidate": 906,
+      "observed": 88,
+      "expected": 55.926490423675844,
+      "actual_rate": 0.09282700421940929,
+      "harville_rate": 0.058994188210628525,
+      "observed_minus_expected": 32.073509576324156
+    },
+    "immediately_behind_first": {
+      "candidates": 4087,
+      "races_with_candidate": 4087,
+      "observed": 1295,
+      "expected": 921.0826032079698,
+      "actual_rate": 0.31685833129434793,
+      "harville_rate": 0.22536887771176162,
+      "observed_minus_expected": 373.9173967920302
+    },
+    "immediately_behind_second": {
+      "candidates": 3819,
+      "races_with_candidate": 3819,
+      "observed": 1112,
+      "expected": 749.7992769843798,
+      "actual_rate": 0.2911757004451427,
+      "harville_rate": 0.19633392955862264,
+      "observed_minus_expected": 362.20072301562016
+    },
+    "neither_line": {
+      "candidates": 47451,
+      "races_with_candidate": 13843,
+      "observed": 7286,
+      "expected": 9515.117803525534,
+      "actual_rate": 0.15354787043476428,
+      "harville_rate": 0.20052512704738645,
+      "observed_minus_expected": -2229.1178035255343
+    }
+  },
+  "by_role": {
+    "leader": {
+      "candidates": 25084,
+      "races_with_candidate": 13685,
+      "observed": 4630,
+      "expected": 6325.383384519055,
+      "actual_rate": 0.18457981183224367,
+      "harville_rate": 0.25216805073030835,
+      "observed_minus_expected": -1695.3833845190547
+    },
+    "second": {
+      "candidates": 24414,
+      "races_with_candidate": 13710,
+      "observed": 5273,
+      "expected": 5887.511233578942,
+      "actual_rate": 0.21598263291554026,
+      "harville_rate": 0.2411530774792718,
+      "observed_minus_expected": -614.5112335789418
+    },
+    "solo": {
+      "candidates": 6732,
+      "races_with_candidate": 5234,
+      "observed": 1112,
+      "expected": 980.1816420486292,
+      "actual_rate": 0.1651812240047534,
+      "harville_rate": 0.14560036275232163,
+      "observed_minus_expected": 131.81835795137079
+    },
+    "third_or_later": {
+      "candidates": 13070,
+      "races_with_candidate": 10580,
+      "observed": 3066,
+      "expected": 887.9237398533622,
+      "actual_rate": 0.2345830145371079,
+      "harville_rate": 0.06793601682122129,
+      "observed_minus_expected": 2178.0762601466377
+    }
+  },
+  "configuration_x_relation": {
+    "first_second_different_lines": {
+      "first_line_only": {
+        "candidates": 8211,
+        "races_with_candidate": 5641,
+        "observed": 2257,
+        "expected": 1879.3207818102433,
+        "actual_rate": 0.27487516745828766,
+        "harville_rate": 0.22887842915725773,
+        "observed_minus_expected": 377.67921818975674
+      },
+      "neither_line": {
+        "candidates": 15114,
+        "races_with_candidate": 6150,
+        "observed": 2131,
+        "expected": 2731.6600806900747,
+        "actual_rate": 0.14099510387719993,
+        "harville_rate": 0.18073707031163655,
+        "observed_minus_expected": -600.6600806900747
+      },
+      "second_line_only": {
+        "candidates": 8132,
+        "races_with_candidate": 5697,
+        "observed": 1999,
+        "expected": 1776.0191374996766,
+        "actual_rate": 0.2458189867191343,
+        "harville_rate": 0.2183988117928771,
+        "observed_minus_expected": 222.98086250032338
+      }
+    },
+    "first_second_same_line": {
+      "line_of_both": {
+        "candidates": 5506,
+        "races_with_candidate": 5041,
+        "observed": 2539,
+        "expected": 910.5422771644801,
+        "actual_rate": 0.46113330911732653,
+        "harville_rate": 0.16537273468297858,
+        "observed_minus_expected": 1628.45772283552
+      },
+      "neither_line": {
+        "candidates": 32337,
+        "races_with_candidate": 7693,
+        "observed": 5155,
+        "expected": 6783.457722835508,
+        "actual_rate": 0.15941491171104308,
+        "harville_rate": 0.2097738727413028,
+        "observed_minus_expected": -1628.4577228355083
+      }
+    }
+  },
+  "configuration_x_direction": {
+    "first_second_different_lines": {
+      "ahead_of_first": {
+        "candidates": 2941,
+        "races_with_candidate": 2783,
+        "observed": 848,
+        "expected": 881.4144110964655,
+        "actual_rate": 0.2883373002380143,
+        "harville_rate": 0.29969888170570064,
+        "observed_minus_expected": -33.41441109646553
+      },
+      "ahead_of_second": {
+        "candidates": 3365,
+        "races_with_candidate": 3080,
+        "observed": 799,
+        "expected": 970.2933700916235,
+        "actual_rate": 0.23744427934621098,
+        "harville_rate": 0.28834869839275584,
+        "observed_minus_expected": -171.2933700916235
+      },
+      "further_behind_first": {
+        "candidates": 1183,
+        "races_with_candidate": 1113,
+        "observed": 114,
+        "expected": 76.8237675058079,
+        "actual_rate": 0.09636517328825021,
+        "harville_rate": 0.06493978656450371,
+        "observed_minus_expected": 37.17623249419211
+      },
+      "further_behind_second": {
+        "candidates": 948,
+        "races_with_candidate": 906,
+        "observed": 88,
+        "expected": 55.926490423675844,
+        "actual_rate": 0.09282700421940929,
+        "harville_rate": 0.058994188210628525,
+        "observed_minus_expected": 32.073509576324156
+      },
+      "immediately_behind_first": {
+        "candidates": 4087,
+        "races_with_candidate": 4087,
+        "observed": 1295,
+        "expected": 921.0826032079698,
+        "actual_rate": 0.31685833129434793,
+        "harville_rate": 0.22536887771176162,
+        "observed_minus_expected": 373.9173967920302
+      },
+      "immediately_behind_second": {
+        "candidates": 3819,
+        "races_with_candidate": 3819,
+        "observed": 1112,
+        "expected": 749.7992769843798,
+        "actual_rate": 0.2911757004451427,
+        "harville_rate": 0.19633392955862264,
+        "observed_minus_expected": 362.20072301562016
+      },
+      "neither_line": {
+        "candidates": 15114,
+        "races_with_candidate": 6150,
+        "observed": 2131,
+        "expected": 2731.6600806900747,
+        "actual_rate": 0.14099510387719993,
+        "harville_rate": 0.18073707031163655,
+        "observed_minus_expected": -600.6600806900747
+      }
+    },
+    "first_second_same_line": {
+      "ahead_of_both": {
+        "candidates": 1033,
+        "races_with_candidate": 1026,
+        "observed": 481,
+        "expected": 365.1971660108068,
+        "actual_rate": 0.46563407550822844,
+        "harville_rate": 0.3535306544151082,
+        "observed_minus_expected": 115.80283398919318
+      },
+      "behind_both": {
+        "candidates": 4120,
+        "races_with_candidate": 3851,
+        "observed": 1895,
+        "expected": 410.9797983584534,
+        "actual_rate": 0.45995145631067963,
+        "harville_rate": 0.09975237824234306,
+        "observed_minus_expected": 1484.0202016415465
+      },
+      "between_first_second": {
+        "candidates": 353,
+        "races_with_candidate": 324,
+        "observed": 163,
+        "expected": 134.36531279521847,
+        "actual_rate": 0.46175637393767704,
+        "harville_rate": 0.38063827987314014,
+        "observed_minus_expected": 28.634687204781528
+      },
+      "neither_line": {
+        "candidates": 32337,
+        "races_with_candidate": 7693,
+        "observed": 5155,
+        "expected": 6783.457722835508,
+        "actual_rate": 0.15941491171104308,
+        "harville_rate": 0.2097738727413028,
+        "observed_minus_expected": -1628.4577228355083
+      }
+    }
+  },
+  "time_period_x_relation": {
+    "2024q1": {
+      "first_line_only": {
+        "candidates": 735,
+        "races_with_candidate": 498,
+        "observed": 193,
+        "expected": 165.6063467178466,
+        "actual_rate": 0.26258503401360545,
+        "harville_rate": 0.2253147574392471,
+        "observed_minus_expected": 27.393653282153394
+      },
+      "line_of_both": {
+        "candidates": 563,
+        "races_with_candidate": 511,
+        "observed": 239,
+        "expected": 89.1237353552279,
+        "actual_rate": 0.42451154529307283,
+        "harville_rate": 0.15830148375706554,
+        "observed_minus_expected": 149.8762646447721
+      },
+      "neither_line": {
+        "candidates": 4443,
+        "races_with_candidate": 1295,
+        "observed": 691,
+        "expected": 904.167593657499,
+        "actual_rate": 0.15552554580238578,
+        "harville_rate": 0.20350384732331733,
+        "observed_minus_expected": -213.16759365749897
+      },
+      "second_line_only": {
+        "candidates": 701,
+        "races_with_candidate": 498,
+        "observed": 193,
+        "expected": 157.10232426942937,
+        "actual_rate": 0.275320970042796,
+        "harville_rate": 0.2241117321960476,
+        "observed_minus_expected": 35.897675730570626
+      }
+    },
+    "2024q2": {
+      "first_line_only": {
+        "candidates": 718,
+        "races_with_candidate": 498,
+        "observed": 188,
+        "expected": 166.6055235842955,
+        "actual_rate": 0.2618384401114206,
+        "harville_rate": 0.23204111919818315,
+        "observed_minus_expected": 21.394476415704503
+      },
+      "line_of_both": {
+        "candidates": 525,
+        "races_with_candidate": 470,
+        "observed": 243,
+        "expected": 88.53566391267657,
+        "actual_rate": 0.46285714285714286,
+        "harville_rate": 0.16863935983366965,
+        "observed_minus_expected": 154.46433608732343
+      },
+      "neither_line": {
+        "candidates": 4377,
+        "races_with_candidate": 1264,
+        "observed": 674,
+        "expected": 872.1950900350397,
+        "actual_rate": 0.1539867489147818,
+        "harville_rate": 0.19926778387823615,
+        "observed_minus_expected": -198.1950900350397
+      },
+      "second_line_only": {
+        "candidates": 718,
+        "races_with_candidate": 497,
+        "observed": 180,
+        "expected": 157.66372246798636,
+        "actual_rate": 0.25069637883008355,
+        "harville_rate": 0.2195873571977526,
+        "observed_minus_expected": 22.33627753201364
+      }
+    },
+    "2024q3": {
+      "first_line_only": {
+        "candidates": 806,
+        "races_with_candidate": 530,
+        "observed": 207,
+        "expected": 178.80591128137826,
+        "actual_rate": 0.25682382133995035,
+        "harville_rate": 0.22184356238384398,
+        "observed_minus_expected": 28.194088718621742
+      },
+      "line_of_both": {
+        "candidates": 546,
+        "races_with_candidate": 491,
+        "observed": 253,
+        "expected": 87.7429123250812,
+        "actual_rate": 0.4633699633699634,
+        "harville_rate": 0.16070130462469084,
+        "observed_minus_expected": 165.2570876749188
+      },
+      "neither_line": {
+        "candidates": 4192,
+        "races_with_candidate": 1253,
+        "observed": 634,
+        "expected": 851.9685113571123,
+        "actual_rate": 0.15124045801526717,
+        "harville_rate": 0.20323676320541803,
+        "observed_minus_expected": -217.96851135711233
+      },
+      "second_line_only": {
+        "candidates": 757,
+        "races_with_candidate": 519,
+        "observed": 188,
+        "expected": 163.48266503642742,
+        "actual_rate": 0.24834874504623514,
+        "harville_rate": 0.2159612483968658,
+        "observed_minus_expected": 24.51733496357258
+      }
+    },
+    "2024q4": {
+      "first_line_only": {
+        "candidates": 767,
+        "races_with_candidate": 529,
+        "observed": 210,
+        "expected": 175.8075348663788,
+        "actual_rate": 0.2737940026075619,
+        "harville_rate": 0.22921451742683024,
+        "observed_minus_expected": 34.1924651336212
+      },
+      "line_of_both": {
+        "candidates": 510,
+        "races_with_candidate": 465,
+        "observed": 241,
+        "expected": 79.70497354110847,
+        "actual_rate": 0.4725490196078431,
+        "harville_rate": 0.15628426184531072,
+        "observed_minus_expected": 161.29502645889153
+      },
+      "neither_line": {
+        "candidates": 4222,
+        "races_with_candidate": 1243,
+        "observed": 630,
+        "expected": 854.377445324242,
+        "actual_rate": 0.14921837991473236,
+        "harville_rate": 0.20236320353487494,
+        "observed_minus_expected": -224.377445324242
+      },
+      "second_line_only": {
+        "candidates": 756,
+        "races_with_candidate": 519,
+        "observed": 191,
+        "expected": 162.11004626826806,
+        "actual_rate": 0.2526455026455027,
+        "harville_rate": 0.21443127813262972,
+        "observed_minus_expected": 28.889953731731936
+      }
+    },
+    "2025q1": {
+      "first_line_only": {
+        "candidates": 706,
+        "races_with_candidate": 495,
+        "observed": 198,
+        "expected": 165.73364959239245,
+        "actual_rate": 0.2804532577903683,
+        "harville_rate": 0.23475021188724143,
+        "observed_minus_expected": 32.26635040760755
+      },
+      "line_of_both": {
+        "candidates": 464,
+        "races_with_candidate": 442,
+        "observed": 217,
+        "expected": 75.64079160147055,
+        "actual_rate": 0.4676724137931034,
+        "harville_rate": 0.1630189474169624,
+        "observed_minus_expected": 141.35920839852946
+      },
+      "neither_line": {
+        "candidates": 4206,
+        "races_with_candidate": 1229,
+        "observed": 641,
+        "expected": 837.6709462715284,
+        "actual_rate": 0.15240133143128864,
+        "harville_rate": 0.19916094775832818,
+        "observed_minus_expected": -196.67094627152835
+      },
+      "second_line_only": {
+        "candidates": 756,
+        "races_with_candidate": 521,
+        "observed": 182,
+        "expected": 158.9546125346082,
+        "actual_rate": 0.24074074074074073,
+        "harville_rate": 0.210257423987577,
+        "observed_minus_expected": 23.045387465391798
+      }
+    },
+    "2025q2": {
+      "first_line_only": {
+        "candidates": 747,
+        "races_with_candidate": 500,
+        "observed": 223,
+        "expected": 169.5753612844118,
+        "actual_rate": 0.29852744310575635,
+        "harville_rate": 0.22700851577565168,
+        "observed_minus_expected": 53.4246387155882
+      },
+      "line_of_both": {
+        "candidates": 505,
+        "races_with_candidate": 471,
+        "observed": 240,
+        "expected": 81.64830207280326,
+        "actual_rate": 0.4752475247524752,
+        "harville_rate": 0.16167980608475893,
+        "observed_minus_expected": 158.35169792719674
+      },
+      "neither_line": {
+        "candidates": 4176,
+        "races_with_candidate": 1217,
+        "observed": 622,
+        "expected": 845.949119824657,
+        "actual_rate": 0.1489463601532567,
+        "harville_rate": 0.2025740229465175,
+        "observed_minus_expected": -223.94911982465703
+      },
+      "second_line_only": {
+        "candidates": 702,
+        "races_with_candidate": 502,
+        "observed": 163,
+        "expected": 150.82721681812552,
+        "actual_rate": 0.23219373219373218,
+        "harville_rate": 0.214853585211005,
+        "observed_minus_expected": 12.172783181874479
+      }
+    },
+    "2025q3": {
+      "first_line_only": {
+        "candidates": 681,
+        "races_with_candidate": 470,
+        "observed": 189,
+        "expected": 159.8830266564998,
+        "actual_rate": 0.2775330396475771,
+        "harville_rate": 0.2347768379684285,
+        "observed_minus_expected": 29.116973343500206
+      },
+      "line_of_both": {
+        "candidates": 539,
+        "races_with_candidate": 484,
+        "observed": 251,
+        "expected": 96.51607258136744,
+        "actual_rate": 0.46567717996289426,
+        "harville_rate": 0.17906506972424385,
+        "observed_minus_expected": 154.48392741863256
+      },
+      "neither_line": {
+        "candidates": 4473,
+        "races_with_candidate": 1273,
+        "observed": 677,
+        "expected": 883.5078431874734,
+        "actual_rate": 0.15135255980326404,
+        "harville_rate": 0.19752019744857444,
+        "observed_minus_expected": -206.50784318747344
+      },
+      "second_line_only": {
+        "candidates": 696,
+        "races_with_candidate": 480,
+        "observed": 174,
+        "expected": 151.0930575746611,
+        "actual_rate": 0.25,
+        "harville_rate": 0.21708772640037513,
+        "observed_minus_expected": 22.90694242533891
+      }
+    },
+    "2025q4": {
+      "first_line_only": {
+        "candidates": 743,
+        "races_with_candidate": 514,
+        "observed": 200,
+        "expected": 168.81021518841402,
+        "actual_rate": 0.2691790040376851,
+        "harville_rate": 0.2272008279790229,
+        "observed_minus_expected": 31.18978481158598
+      },
+      "line_of_both": {
+        "candidates": 505,
+        "races_with_candidate": 459,
+        "observed": 240,
+        "expected": 86.96368890575,
+        "actual_rate": 0.4752475247524752,
+        "harville_rate": 0.1722053245658416,
+        "observed_minus_expected": 153.03631109424998
+      },
+      "neither_line": {
+        "candidates": 4429,
+        "races_with_candidate": 1282,
+        "observed": 692,
+        "expected": 884.6865666115092,
+        "actual_rate": 0.15624294423120344,
+        "harville_rate": 0.19974860388609375,
+        "observed_minus_expected": -192.6865666115092
+      },
+      "second_line_only": {
+        "candidates": 733,
+        "races_with_candidate": 515,
+        "observed": 168,
+        "expected": 159.53952929432896,
+        "actual_rate": 0.2291950886766712,
+        "harville_rate": 0.21765283669076257,
+        "observed_minus_expected": 8.460470705671042
+      }
+    },
+    "2026julaug": {
+      "first_line_only": {
+        "candidates": 505,
+        "races_with_candidate": 370,
+        "observed": 136,
+        "expected": 116.17674962190165,
+        "actual_rate": 0.2693069306930693,
+        "harville_rate": 0.2300529695483201,
+        "observed_minus_expected": 19.82325037809835
+      },
+      "line_of_both": {
+        "candidates": 324,
+        "races_with_candidate": 292,
+        "observed": 136,
+        "expected": 54.17287827266634,
+        "actual_rate": 0.41975308641975306,
+        "harville_rate": 0.1672002415823035,
+        "observed_minus_expected": 81.82712172733366
+      },
+      "neither_line": {
+        "candidates": 3023,
+        "races_with_candidate": 885,
+        "observed": 485,
+        "expected": 599.2814446362561,
+        "actual_rate": 0.1604366523321204,
+        "harville_rate": 0.19824063666432554,
+        "observed_minus_expected": -114.28144463625608
+      },
+      "second_line_only": {
+        "candidates": 526,
+        "races_with_candidate": 389,
+        "observed": 135,
+        "expected": 122.36892746917394,
+        "actual_rate": 0.25665399239543724,
+        "harville_rate": 0.2326405465193421,
+        "observed_minus_expected": 12.63107253082606
+      }
+    },
+    "2026q1": {
+      "first_line_only": {
+        "candidates": 749,
+        "races_with_candidate": 510,
+        "observed": 222,
+        "expected": 165.53769061031082,
+        "actual_rate": 0.2963951935914553,
+        "harville_rate": 0.22101160295101577,
+        "observed_minus_expected": 56.46230938968918
+      },
+      "line_of_both": {
+        "candidates": 460,
+        "races_with_candidate": 427,
+        "observed": 214,
+        "expected": 78.4372604954656,
+        "actual_rate": 0.4652173913043478,
+        "harville_rate": 0.17051578368579476,
+        "observed_minus_expected": 135.56273950453442
+      },
+      "neither_line": {
+        "candidates": 4172,
+        "races_with_candidate": 1225,
+        "observed": 631,
+        "expected": 834.0928710837736,
+        "actual_rate": 0.1512464046021093,
+        "harville_rate": 0.1999263832894951,
+        "observed_minus_expected": -203.09287108377362
+      },
+      "second_line_only": {
+        "candidates": 752,
+        "races_with_candidate": 514,
+        "observed": 175,
+        "expected": 163.93217781044845,
+        "actual_rate": 0.2327127659574468,
+        "harville_rate": 0.21799491730112827,
+        "observed_minus_expected": 11.06782218955155
+      }
+    },
+    "2026q2": {
+      "first_line_only": {
+        "candidates": 800,
+        "races_with_candidate": 553,
+        "observed": 220,
+        "expected": 186.5353529941136,
+        "actual_rate": 0.275,
+        "harville_rate": 0.233169191242642,
+        "observed_minus_expected": 33.464647005886405
+      },
+      "line_of_both": {
+        "candidates": 406,
+        "races_with_candidate": 386,
+        "observed": 197,
+        "expected": 63.47505792781749,
+        "actual_rate": 0.4852216748768473,
+        "harville_rate": 0.15634250721137313,
+        "observed_minus_expected": 133.5249420721825
+      },
+      "neither_line": {
+        "candidates": 4333,
+        "races_with_candidate": 1269,
+        "observed": 697,
+        "expected": 871.810040180313,
+        "actual_rate": 0.16085852757904454,
+        "harville_rate": 0.20120240945772283,
+        "observed_minus_expected": -174.81004018031297
+      },
+      "second_line_only": {
+        "candidates": 792,
+        "races_with_candidate": 573,
+        "observed": 182,
+        "expected": 174.17954889775322,
+        "actual_rate": 0.2297979797979798,
+        "harville_rate": 0.2199236728506985,
+        "observed_minus_expected": 7.820451102246778
+      }
+    },
+    "2026sep": {
+      "first_line_only": {
+        "candidates": 254,
+        "races_with_candidate": 174,
+        "observed": 71,
+        "expected": 60.24341941229908,
+        "actual_rate": 0.2795275590551181,
+        "harville_rate": 0.23717881658385465,
+        "observed_minus_expected": 10.756580587700917
+      },
+      "line_of_both": {
+        "candidates": 159,
+        "races_with_candidate": 143,
+        "observed": 68,
+        "expected": 28.580940173043697,
+        "actual_rate": 0.4276729559748428,
+        "harville_rate": 0.17975434071096666,
+        "observed_minus_expected": 39.4190598269563
+      },
+      "neither_line": {
+        "candidates": 1405,
+        "races_with_candidate": 408,
+        "observed": 212,
+        "expected": 275.41033135618926,
+        "actual_rate": 0.15088967971530248,
+        "harville_rate": 0.19602158815387136,
+        "observed_minus_expected": -63.41033135618926
+      },
+      "second_line_only": {
+        "candidates": 243,
+        "races_with_candidate": 170,
+        "observed": 68,
+        "expected": 54.76530905846826,
+        "actual_rate": 0.27983539094650206,
+        "harville_rate": 0.22537164221591877,
+        "observed_minus_expected": 13.234690941531738
+      }
+    }
+  },
+  "split_x_relation": {
+    "fit": {
+      "first_line_only": {
+        "candidates": 3732,
+        "races_with_candidate": 2550,
+        "observed": 996,
+        "expected": 852.5589660422916,
+        "actual_rate": 0.26688102893890675,
+        "harville_rate": 0.22844559647435464,
+        "observed_minus_expected": 143.44103395770844
+      },
+      "line_of_both": {
+        "candidates": 2608,
+        "races_with_candidate": 2379,
+        "observed": 1193,
+        "expected": 420.7480767355644,
+        "actual_rate": 0.45743865030674846,
+        "harville_rate": 0.16132978402437284,
+        "observed_minus_expected": 772.2519232644356
+      },
+      "neither_line": {
+        "candidates": 21440,
+        "races_with_candidate": 6284,
+        "observed": 3270,
+        "expected": 4320.379586645432,
+        "actual_rate": 0.1525186567164179,
+        "harville_rate": 0.20151024191443245,
+        "observed_minus_expected": -1050.379586645432
+      },
+      "second_line_only": {
+        "candidates": 3688,
+        "races_with_candidate": 2554,
+        "observed": 934,
+        "expected": 799.313370576718,
+        "actual_rate": 0.2532537960954447,
+        "harville_rate": 0.21673356035160465,
+        "observed_minus_expected": 134.68662942328206
+      }
+    },
+    "chronological_check": {
+      "first_line_only": {
+        "candidates": 4479,
+        "races_with_candidate": 3091,
+        "observed": 1261,
+        "expected": 1026.7618157679528,
+        "actual_rate": 0.2815360571556151,
+        "harville_rate": 0.22923907474167288,
+        "observed_minus_expected": 234.23818423204716
+      },
+      "line_of_both": {
+        "candidates": 2898,
+        "races_with_candidate": 2662,
+        "observed": 1346,
+        "expected": 489.79420042891445,
+        "actual_rate": 0.4644582470669427,
+        "harville_rate": 0.16901111125911472,
+        "observed_minus_expected": 856.2057995710855
+      },
+      "neither_line": {
+        "candidates": 26011,
+        "races_with_candidate": 7559,
+        "observed": 4016,
+        "expected": 5194.738216880186,
+        "actual_rate": 0.15439621698512168,
+        "harville_rate": 0.19971312970974534,
+        "observed_minus_expected": -1178.738216880186
+      },
+      "second_line_only": {
+        "candidates": 4444,
+        "races_with_candidate": 3143,
+        "observed": 1065,
+        "expected": 976.7057669229592,
+        "actual_rate": 0.23964896489648965,
+        "harville_rate": 0.21978077563522935,
+        "observed_minus_expected": 88.29423307704076
+      }
+    }
+  },
+  "probability_bins": [
+    {
+      "range": [
+        0,
+        0.01
+      ],
+      "candidates": 283,
+      "races_with_candidate": 277,
+      "observed": 28,
+      "expected": 1.205040805962761,
+      "actual_rate": 0.0989399293286219,
+      "harville_rate": 0.0042580947207164705,
+      "observed_minus_expected": 26.79495919403724
+    },
+    {
+      "range": [
+        0.01,
+        0.025
+      ],
+      "candidates": 2291,
+      "races_with_candidate": 2119,
+      "observed": 237,
+      "expected": 43.4113499747131,
+      "actual_rate": 0.10344827586206896,
+      "harville_rate": 0.018948646868054603,
+      "observed_minus_expected": 193.5886500252869
+    },
+    {
+      "range": [
+        0.025,
+        0.05
+      ],
+      "candidates": 6856,
+      "races_with_candidate": 5685,
+      "observed": 903,
+      "expected": 258.7325600211847,
+      "actual_rate": 0.13170945157526254,
+      "harville_rate": 0.037738121356648884,
+      "observed_minus_expected": 644.2674399788152
+    },
+    {
+      "range": [
+        0.05,
+        0.075
+      ],
+      "candidates": 6669,
+      "races_with_candidate": 5558,
+      "observed": 1032,
+      "expected": 414.781736085266,
+      "actual_rate": 0.15474583895636526,
+      "harville_rate": 0.062195491990593196,
+      "observed_minus_expected": 617.218263914734
+    },
+    {
+      "range": [
+        0.075,
+        0.1
+      ],
+      "candidates": 6168,
+      "races_with_candidate": 5231,
+      "observed": 1011,
+      "expected": 537.7550973261464,
+      "actual_rate": 0.16391050583657588,
+      "harville_rate": 0.08718467855482269,
+      "observed_minus_expected": 473.24490267385363
+    },
+    {
+      "range": [
+        0.1,
+        0.15
+      ],
+      "candidates": 10461,
+      "races_with_candidate": 7822,
+      "observed": 1801,
+      "expected": 1298.3620310639865,
+      "actual_rate": 0.17216327310964535,
+      "harville_rate": 0.12411452356982951,
+      "observed_minus_expected": 502.6379689360135
+    },
+    {
+      "range": [
+        0.15,
+        0.2
+      ],
+      "candidates": 8413,
+      "races_with_candidate": 6529,
+      "observed": 1608,
+      "expected": 1465.3578158408784,
+      "actual_rate": 0.19113277071199333,
+      "harville_rate": 0.17417779815058582,
+      "observed_minus_expected": 142.6421841591216
+    },
+    {
+      "range": [
+        0.2,
+        0.25
+      ],
+      "candidates": 6785,
+      "races_with_candidate": 5457,
+      "observed": 1437,
+      "expected": 1521.0357604615542,
+      "actual_rate": 0.21179071481208547,
+      "harville_rate": 0.2241762358823219,
+      "observed_minus_expected": -84.03576046155422
+    },
+    {
+      "range": [
+        0.25,
+        0.3
+      ],
+      "candidates": 5423,
+      "races_with_candidate": 4645,
+      "observed": 1262,
+      "expected": 1485.8084947566535,
+      "actual_rate": 0.23271252074497512,
+      "harville_rate": 0.27398275765381774,
+      "observed_minus_expected": -223.80849475665354
+    },
+    {
+      "range": [
+        0.3,
+        0.4
+      ],
+      "candidates": 7313,
+      "races_with_candidate": 6045,
+      "observed": 1880,
+      "expected": 2530.25646050442,
+      "actual_rate": 0.25707643921783124,
+      "harville_rate": 0.3459943197736114,
+      "observed_minus_expected": -650.2564605044199
+    },
+    {
+      "range": [
+        0.4,
+        0.5
+      ],
+      "candidates": 4251,
+      "races_with_candidate": 4111,
+      "observed": 1250,
+      "expected": 1893.749452341056,
+      "actual_rate": 0.29404845918607386,
+      "harville_rate": 0.44548328683628696,
+      "observed_minus_expected": -643.749452341056
+    },
+    {
+      "range": [
+        0.5,
+        0.6
+      ],
+      "candidates": 2585,
+      "races_with_candidate": 2585,
+      "observed": 881,
+      "expected": 1408.5777934516461,
+      "actual_rate": 0.3408123791102515,
+      "harville_rate": 0.5449043688400952,
+      "observed_minus_expected": -527.5777934516461
+    },
+    {
+      "range": [
+        0.6,
+        0.7
+      ],
+      "candidates": 1242,
+      "races_with_candidate": 1242,
+      "observed": 498,
+      "expected": 798.8723398546847,
+      "actual_rate": 0.40096618357487923,
+      "harville_rate": 0.6432144443274433,
+      "observed_minus_expected": -300.8723398546847
+    },
+    {
+      "range": [
+        0.7,
+        1
+      ],
+      "candidates": 560,
+      "races_with_candidate": 560,
+      "observed": 253,
+      "expected": 423.0940675118441,
+      "actual_rate": 0.4517857142857143,
+      "harville_rate": 0.7555251205568645,
+      "observed_minus_expected": -170.09406751184412
+    }
+  ]
+}
