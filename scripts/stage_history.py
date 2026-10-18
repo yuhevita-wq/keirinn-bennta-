@@ -15,6 +15,7 @@ import hashlib
 import json
 import math
 import re
+import subprocess
 import unicodedata
 from collections import defaultdict, Counter
 from pathlib import Path
@@ -69,6 +70,10 @@ def stage(origin, output):
     ledger = json.loads(LEDGER.read_text(encoding="utf-8"))
     lock = json.loads(LOCK.read_text(encoding="utf-8"))
     assert ledger["origin_commit_sha"] == lock["source_commit_sha"]
+    commit = subprocess.run(["git", "-C", str(origin), "rev-parse", "HEAD"],
+                            check=True, capture_output=True, text=True).stdout.strip()
+    if commit != ledger["origin_commit_sha"]:
+        raise RuntimeError("Source checkout commit is not the fixed research snapshot: " + commit)
     assert lock["scope_id"] == "F1_S_CLASS_ONLY"
     forecasts = {}
     for period in ledger["forecasts"]:
