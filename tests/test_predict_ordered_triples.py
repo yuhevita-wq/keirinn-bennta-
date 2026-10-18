@@ -42,7 +42,7 @@ class TripleProbabilityTests(unittest.TestCase):
         self.assertEqual(third_position(7,1,4,lines),"neither_line")
         self.assertEqual(third_role(3,lines),"role_third_or_later")
         self.assertEqual(third_role(2,lines),"role_second")
-        self.assertEqual(third_role(6,lines),"role_second" if False else "role_leader")
+        self.assertEqual(third_role(6,lines),"role_leader")
 
     def test_scope_and_outcome_leakage_blocked(self):
         card=fixture()
