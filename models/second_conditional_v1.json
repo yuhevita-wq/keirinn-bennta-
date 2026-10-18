@@ -1,0 +1,66 @@
+{
+  "schema": "f1s_second_conditional_research_v1",
+  "scope": "F1 S級 only",
+  "status": "SELECTED_RESEARCH_REFERENCE_NOT_MARKET_OR_WAGER_MODEL",
+  "source_forecasts": "12 period adopted independent first-win q from original commit 8da8f4f8e1125eb522df5546d07cd6657fab7dda",
+  "first_win_model": "V2 full_plus_line corrected unscaled term=999 with high-hinge theta=0.6412587661746468",
+  "fit_cohort": "all 14,081 F1 S級 races with frozen win forecast, uniquely observed first and second and third, valid predicted lineup",
+  "fit_sample_races": 14081,
+  "fit_sample_second_candidate_rows": 83381,
+  "fit_method": "maximum likelihood of actual second rider given actual first and remaining lineup",
+  "equation": "P(second=j|first=i)=q_j^gamma * exp(position_effect(i,j)) / sum_{h!=i}(q_h^gamma * exp(position_effect(i,h)))",
+  "coefficients": {
+    "gamma": 0.6407563020428341,
+    "directly_behind_winner": 1.4360265199538997,
+    "ahead_of_winner": 1.186152701168385,
+    "later_behind_winner": 0.4478404906759193,
+    "other_line": 0
+  },
+  "direction_definition": {
+    "directly_behind_winner": "Same predicted line as i, j is immediately behind i in displayed order",
+    "ahead_of_winner": "Same predicted line as i, j is ahead of i in displayed order",
+    "later_behind_winner": "Same predicted line as i, j is at least 2 positions behind i",
+    "other_line": "Any other rider from another line (zero offset)"
+  },
+  "parameter_identifiability": "Three mutually exclusive within-line directions. No separate redundant same_line term, because same_line equals sum of those three indicators.",
+  "alternative_development_fit": {
+    "train_races": 6393,
+    "train_end_inclusive": "2025-03-31",
+    "gamma": 0.6445860534733303,
+    "directly_behind_winner": 1.4632697998834279,
+    "ahead_of_winner": 1.186647960053046,
+    "later_behind_winner": 0.4627667528374737,
+    "chronological_check_races": 7688,
+    "chronological_check_from": "2025-04-01",
+    "holdout_conditional_second_log_loss": 1.3996539709288043,
+    "holdout_top1_second_accuracy": 0.47658688865764826,
+    "harville_holdout_log_loss": 1.5878236395424699,
+    "gamma_plus_same_line_holdout_log_loss": 1.4093956827945997,
+    "more_complex_directed_plus_roles_log_loss": 1.3984979702557454,
+    "improvement_over_same_line_daily_bootstrap95": [
+      0.006554940549020827,
+      0.01277245215717346
+    ],
+    "additional_roles_improvement_vs_directed_daily_bootstrap95": [
+      -0.0007188173936363439,
+      0.003049582927857706
+    ]
+  },
+  "all_data_conditional_second_log_loss_in_sample": 1.3929265807081752,
+  "references": [
+    "reports/second_place_empirical.json",
+    "reports/second_place_models.json",
+    "reports/second_place_compare.json",
+    "reports/staged_history_audit.json"
+  ],
+  "caveats": [
+    "Full-cohort coefficients fitted and evaluated on same dataset are descriptive model-discovery results, not independent generalization evidence.",
+    "Chronological check interval has been visited by earlier research; not a globally virgin test.",
+    "Historical predicted lines and racer feature snapshots have not been certified as identical to 15-minute-before-deadline captures.",
+    "Conditional second is evaluated given known actual first. Pre-race pair probability must multiply by q_i and sum over first when necessary.",
+    "Independent q has no integrated betting-market odds; probability accuracy does not demonstrate expected wagering returns."
+  ],
+  "existing_v7_second_third_coefficients_not_used": true,
+  "third_place_model_status": "NOT_YET_ESTIMATED",
+  "market_integration_status": "NOT_YET_PERFORMED"
+}
