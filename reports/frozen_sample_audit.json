@@ -1,0 +1,119 @@
+{
+  "scope": "F1 S級 only (as enforced in forecast build)",
+  "status": "FROZEN_FORECAST_PODIUM_AUDIT",
+  "date_split": "fit: through 2025-03-31; chronological_check: from 2025-04-01",
+  "disclaimer": "Chronological evaluation is not globally virgin: earlier studies inspected parts of these dates",
+  "data_limitation": "Retroactively collected date-specific racecards, not fully certified original real-time snapshots",
+  "V4_calibration_applied": false,
+  "V7_coefficients_unchanged": true,
+  "minima": {
+    "races": 3198,
+    "second_candidate_rows": 29679,
+    "third_candidate_rows": 26481
+  },
+  "forecast_races": 14215,
+  "unusable_podium_count": {
+    "missing_or_ambiguous_podium": 134
+  },
+  "periods": {
+    "2024q1": {
+      "forecast_races": 1328,
+      "training_races": 3842,
+      "max_training_date": "2023-12-31",
+      "forecast_sha256": "b8d8d640ed771329936415d1be8d38edcf12527ede4110a259ca486a75a8abd0"
+    },
+    "2024q2": {
+      "forecast_races": 1295,
+      "training_races": 5167,
+      "max_training_date": "2024-03-31",
+      "forecast_sha256": "e15a10880d2cdb21e250d3125ed05fe995d6905c358341b371c304e5e3ccfd74"
+    },
+    "2024q3": {
+      "forecast_races": 1290,
+      "training_races": 6458,
+      "max_training_date": "2024-06-30",
+      "forecast_sha256": "c209d10106be6948fa37668973d475969b2f9dd4ab2a4718930ae3c1c4a766cc"
+    },
+    "2024q4": {
+      "forecast_races": 1278,
+      "training_races": 7746,
+      "max_training_date": "2024-09-30",
+      "forecast_sha256": "73af8198495ecdaff8fd1b29733ebb152b0a4fbdfc2b4044439c39f5b08268ea"
+    },
+    "2025q1": {
+      "forecast_races": 1248,
+      "training_races": 9021,
+      "max_training_date": "2024-12-31",
+      "forecast_sha256": "423826110868e2a2dafb7b8176eb09c724f96699f3ba6a158354183de629cada"
+    },
+    "2025q2": {
+      "forecast_races": 1266,
+      "training_races": 10261,
+      "max_training_date": "2025-03-31",
+      "forecast_sha256": "9394950385c249fd866f42b35a3699a9270287a9645644b0bee31f3b80491856"
+    },
+    "2025q3": {
+      "forecast_races": 1308,
+      "training_races": 11518,
+      "max_training_date": "2025-06-30",
+      "forecast_sha256": "22b0ae56989e375d8dd0d31526ff22de05c6f545cefefbda34d9dbd7d78c5377"
+    },
+    "2025q4": {
+      "forecast_races": 1317,
+      "training_races": 12821,
+      "max_training_date": "2025-09-30",
+      "forecast_sha256": "9dc55a8df7fa6ca20ddc9978a683611dc7daef51ea17ab2891cb3da3264591c1"
+    },
+    "2026q1": {
+      "forecast_races": 1256,
+      "training_races": 14127,
+      "max_training_date": "2025-12-31",
+      "forecast_sha256": "a5160ba04b323889c06a2d03628fa511dd7367ff21841ce212b5f89e4758b0ef"
+    },
+    "2026q2": {
+      "forecast_races": 1306,
+      "training_races": 15377,
+      "max_training_date": "2026-03-31",
+      "forecast_sha256": "5bc5dda6ddc7260b112600a3d54df70c9c04479e5881834489859f0e9bce970c"
+    },
+    "2026julaug": {
+      "forecast_races": 901,
+      "training_races": 16680,
+      "max_training_date": "2026-06-30",
+      "forecast_sha256": "1e418b5eae7e2cca7e75bc3ae6ea86f08532b15b629d1ae19b22853cd8fbb01a"
+    },
+    "2026sep": {
+      "forecast_races": 422,
+      "training_races": 17578,
+      "max_training_date": "2026-08-30",
+      "forecast_sha256": "cc0e4e4e3da87f197b9a6c7acf9e6b86bbd909d49d35f02d5faab2cc255496c1"
+    }
+  },
+  "partition": {
+    "fit": {
+      "eligible_races": 6393,
+      "second_candidate_rows": 37861,
+      "third_candidate_rows": 31468,
+      "field_size_distribution": {
+        "6": 365,
+        "7": 5962,
+        "5": 66
+      },
+      "race_ids_sha256": "648c8a21fdf6343fe31f8efe7d70a73c45d04f9c21f9741d2f9127c7c05497f6",
+      "passes_benter_sample_gate": true
+    },
+    "chronological_check": {
+      "eligible_races": 7688,
+      "second_candidate_rows": 45520,
+      "third_candidate_rows": 37832,
+      "field_size_distribution": {
+        "7": 7162,
+        "6": 444,
+        "5": 82
+      },
+      "race_ids_sha256": "b1229889672487fb765990790fd5f0ae7dffaa53740a26fd2a6db74a76b8b299",
+      "passes_benter_sample_gate": true
+    }
+  },
+  "both_partitions_pass": true
+}
