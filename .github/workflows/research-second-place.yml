@@ -1,0 +1,86 @@
+name: Discover F1 S級 second-place probability law
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/research-second-place.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: benter-f1-s-second-law-research
+  cancel-in-progress: false
+jobs:
+  discover_conditional_second:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout dedicated research repo
+        uses: actions/checkout@v4
+        with:
+          path: project
+      - name: Checkout original dataset pinned at model adoption
+        uses: actions/checkout@v4
+        with:
+          repository: yuhevita-wq/keirin-market-analysis-
+          ref: 8da8f4f8e1125eb522df5546d07cd6657fab7dda
+          path: origin
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /research/benter_walkforward_v7/frozen_term_unscaled/independent_win_*.csv
+            /data/2023/s_class_f1_all_parts/*/entries.csv
+            /data/2023/s_class_f1_all_parts/*/races.csv
+            /data/2023/s_class_f1_all_parts/*/results.csv
+            /data/2024/s_class_f1_all_parts/*/entries.csv
+            /data/2024/s_class_f1_all_parts/*/races.csv
+            /data/2024/s_class_f1_all_parts/*/results.csv
+            /data/2025/s_class_f1_all_parts/*/entries.csv
+            /data/2025/s_class_f1_all_parts/*/races.csv
+            /data/2025/s_class_f1_all_parts/*/results.csv
+            /data/2026_h1/s_class_f1_all/entries.csv
+            /data/2026_h1/s_class_f1_all/races.csv
+            /data/2026_h1/s_class_f1_all/results.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/entries.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/races.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/results.csv
+            /research/benter_calibration_v4/sep_holdout/entries.csv
+            /research/benter_calibration_v4/sep_holdout/races.csv
+            /research/benter_calibration_v4/sep_holdout/results.csv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install mathematical dependencies
+        run: python -m pip install 'numpy>=1.26,<3' 'scipy>=1.11,<2'
+      - name: Restore exact 14081 F1 S-class races from original forecasts, results and lines
+        run: |
+          python -u project/scripts/stage_history.py \
+            --source-root origin \
+            --output project/stage/f1_s_class_14081.jsonl
+      - name: Derive actual second-place residuals before fitting mathematical laws
+        run: |
+          python -u project/research/second_place_empirical.py \
+            --input project/stage/f1_s_class_14081.jsonl \
+            --out project/reports/second_place_empirical.json
+      - name: Maximum-likelihood comparison including Harville and Benter second-exponent
+        run: |
+          python -u project/research/second_place_fit.py \
+            --input project/stage/f1_s_class_14081.jsonl \
+            --out project/reports/second_place_models.json
+      - name: Commit immutable study results to new GitHub research repo
+        run: |
+          set -euo pipefail
+          git -C project config user.name "github-actions[bot]"
+          git -C project config user.email "github-actions[bot]@users.noreply.github.com"
+          git -C project add reports/second_place_empirical.json reports/second_place_models.json
+          git -C project commit -m "Report 14081 F1 S-class second-place empirical residuals and MLE rules [skip ci]"
+          git -C project pull --rebase origin main
+          git -C project push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        with:
+          name: f1-s-second-place-study-14081
+          path: |
+            project/reports/second_place_empirical.json
+            project/reports/second_place_models.json
+            project/stage/f1_s_class_14081.audit.json
+          retention-days: 30
