@@ -20,9 +20,9 @@ MODELS={
     "benter_1994_gamma_081":["log_q"],
     "estimated_gamma":["log_q"],
     "gamma_plus_same_line":["log_q","same_line"],
-    "gamma_plus_directed_line":["log_q","same_line","directly_behind_winner","ahead_of_winner","later_behind_winner"],
+    "gamma_plus_directed_line":["log_q","directly_behind_winner","ahead_of_winner","later_behind_winner"],
     "gamma_plus_candidate_role":["log_q","same_line","candidate_is_second_role","candidate_is_third_or_later_role","candidate_is_solo"],
-    "gamma_plus_directed_and_role":COLS,
+    "gamma_plus_directed_and_role":["log_q","directly_behind_winner","ahead_of_winner","later_behind_winner","candidate_is_second_role","candidate_is_third_or_later_role","candidate_is_solo"],
 }
 # The Benter fixed gamma is a reference only; it was fitted to horse data.
 LOG_EPS=1e-15
@@ -169,7 +169,7 @@ def main():
     report={
         "research_stage":"CONDITIONAL_SECOND_MLE_AFTER_EMPIRICAL_AUDIT",
         "scope":"F1 S級 only",
-        "equation":"P(j second | i first) = exp(gamma*log(q_j) + a*same_line + b*directly_behind + c*ahead + d*later_behind + candidate_role_adjustments) / sum_{h != i} exp(same(h)). Candidate families use different subsets of these terms.",
+        "equation":"P(second=j | first=i) = q_j^gamma * exp(A*directly_behind + B*ahead_of_winner + C*later_behind_winner + role_adjustments) / sum_{h != i}(q_h^gamma * exp(A*directly_behind(h) + B*ahead(h) + C*later_behind(h) + role_adjustments(h))). A, B, C are mutually exclusive line-position effects; the simpler same-line family substitutes one common term.",
         "race_count":len(allrows),
         "second_candidate_rows":int(a["M"].sum()),
         "result_conditioned_on_actual_first":True,
@@ -181,6 +181,7 @@ def main():
         "notes":["Fit over entire eligible 14081 races is for empirical rule discovery. Fit on development and evaluate on later interval is a generalization diagnostic, not a globally virgin test.",
                  "No candidate is imposed as true before comparing residuals and predicted vs actual; no 3rd-place or wager model chosen.",
                  "Market odds not used. No claim of positive expected value.",
+                 "same_line = directly_behind + ahead_of_winner + later_behind_winner; including all four in one equation would produce non-identifiable coefficients. Directed candidates use the three mutually exclusive directed categories WITHOUT a redundant same_line indicator.",
                  "For 2024-2025Q1 the 1st-win calibrator has seen development labels. Interpretation is retrospective descriptive."]
     }
     loss_check={}
