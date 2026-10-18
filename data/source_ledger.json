@@ -1,0 +1,230 @@
+{
+  "schema": "f1_s_benter_first_win_source_ledger_v1",
+  "provenance_type": "git_commit_pinned_and_per_file_hash_verified_by_original_run",
+  "origin_repo": "yuhevita-wq/keirin-market-analysis-",
+  "origin_url": "https://github.com/yuhevita-wq/keirin-market-analysis-/tree/8da8f4f8e1125eb522df5546d07cd6657fab7dda",
+  "origin_branch_at_adoption": "research/benter-minimal-line-v7-20261018",
+  "origin_commit_sha": "8da8f4f8e1125eb522df5546d07cd6657fab7dda",
+  "source_documents": {
+    "first_win_adoption": {
+      "path": "research/benter_walkforward_v7/FIRST_WIN_ADOPTION.md",
+      "git_blob_sha": "ba6de37215659714448af9e2af822d05d510426f"
+    },
+    "first_win_full_report": {
+      "path": "research/benter_walkforward_v7/first_win_research_term_unscaled/first_win_report.json",
+      "git_blob_sha": "1425389321edaa51bdf5b2ee4c9e5b3f7f9152cd"
+    },
+    "universe_original_lock": {
+      "path": "research/benter_minimal_line_v7/research_universe_lock.json",
+      "git_blob_sha": "19b6d68781fe8ca2b030937fabdb1deea8b45199"
+    },
+    "sample_audit": {
+      "path": "research/benter_walkforward_v7/frozen_sample_audit.json",
+      "git_blob_sha": "5d8406be5e7014bf37d638dd0f1718cf6a348d7e"
+    }
+  },
+  "scope": "F1 S-class, no other grades, girls excluded",
+  "total_frozen_forecast_races": 14215,
+  "excluded_missing_ambiguous_podium": {
+    "missing_or_ambiguous_podium": 134
+  },
+  "eligible_podium_races": 14081,
+  "partition_audit": {
+    "fit": {
+      "eligible_races": 6393,
+      "second_candidate_rows": 37861,
+      "third_candidate_rows": 31468,
+      "field_size_distribution": {
+        "5": 66,
+        "6": 365,
+        "7": 5962
+      },
+      "race_ids_sha256": "648c8a21fdf6343fe31f8efe7d70a73c45d04f9c21f9741d2f9127c7c05497f6",
+      "passes_benter_sample_gate": true
+    },
+    "chronological_check": {
+      "eligible_races": 7688,
+      "second_candidate_rows": 45520,
+      "third_candidate_rows": 37832,
+      "field_size_distribution": {
+        "5": 82,
+        "6": 444,
+        "7": 7162
+      },
+      "race_ids_sha256": "b1229889672487fb765990790fd5f0ae7dffaa53740a26fd2a6db74a76b8b299",
+      "passes_benter_sample_gate": true
+    }
+  },
+  "forecasts": [
+    {
+      "period": "2024q1",
+      "from": "2024-01-01",
+      "until_exclusive": "2024-04-01",
+      "train_max_date": "2023-12-31",
+      "training_races": 3842,
+      "target_races": 1328,
+      "target_rider_rows": 9155,
+      "target_ids_sha256": "212b5c164ee48e53dfb0309a05a097c06b9e23e3a937575ce074da796797dbfe",
+      "predicted_win_csv_sha256": "a9ec97322514dc013410476fd48f41315edbd5eacaff3b7b9e45e934b63aefb2",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2024q1.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2024q1.json",
+      "manifest_git_blob_sha": "2d39681640c70507396d8afcff8a077260d57834"
+    },
+    {
+      "period": "2024q2",
+      "from": "2024-04-01",
+      "until_exclusive": "2024-07-01",
+      "train_max_date": "2024-03-31",
+      "training_races": 5167,
+      "target_races": 1295,
+      "target_rider_rows": 8978,
+      "target_ids_sha256": "efe6a60e9a4edd0e626d7f1809dfde3c42e35bb46279bab32324dd139e7b4377",
+      "predicted_win_csv_sha256": "6086568b898bfa195909d01b00847d5be81f3f0470c13ea1768265e0c2713400",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2024q2.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2024q2.json",
+      "manifest_git_blob_sha": "7cbb275ca7502d6fa92207b31a47f80899556fe8"
+    },
+    {
+      "period": "2024q3",
+      "from": "2024-07-01",
+      "until_exclusive": "2024-10-01",
+      "train_max_date": "2024-06-30",
+      "training_races": 6458,
+      "target_races": 1290,
+      "target_rider_rows": 8920,
+      "target_ids_sha256": "ff598d5846ea90b9cb9835cca0985b351704cc86db018cee8d14705dbf4d6298",
+      "predicted_win_csv_sha256": "9b4e9127d2c01938607002a9fc61e240ac6672e396e37e451238fb1c8f244c76",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2024q3.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2024q3.json",
+      "manifest_git_blob_sha": "cb120bfd977a356dbd91b5324d9c94482f707615"
+    },
+    {
+      "period": "2024q4",
+      "from": "2024-10-01",
+      "until_exclusive": "2025-01-01",
+      "train_max_date": "2024-09-30",
+      "training_races": 7746,
+      "target_races": 1278,
+      "target_rider_rows": 8841,
+      "target_ids_sha256": "1b288d46c86187d79ba67977a24ce35b16e87f1da1b706d9907362e56164ca9c",
+      "predicted_win_csv_sha256": "283dde96498d76fceb8cb5e47da0f0368ad4fc9fe8a3da704612eaf241b4f62d",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2024q4.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2024q4.json",
+      "manifest_git_blob_sha": "995d0e1db1f98779913f776da348b08faee71b33"
+    },
+    {
+      "period": "2025q1",
+      "from": "2025-01-01",
+      "until_exclusive": "2025-04-01",
+      "train_max_date": "2024-12-31",
+      "training_races": 9021,
+      "target_races": 1248,
+      "target_rider_rows": 8677,
+      "target_ids_sha256": "e13d32d62d3894e853537d7d9d2bee9c8c175e313e052759824127243cf8b771",
+      "predicted_win_csv_sha256": "607b825c2f89c7e7fa25f6a6c807b64fa4a16a0b994c7534945baaffb0ead8ee",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2025q1.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2025q1.json",
+      "manifest_git_blob_sha": "2033ddf81d3315369614400619fd312923df0157"
+    },
+    {
+      "period": "2025q2",
+      "from": "2025-04-01",
+      "until_exclusive": "2025-07-01",
+      "train_max_date": "2025-03-31",
+      "training_races": 10261,
+      "target_races": 1266,
+      "target_rider_rows": 8749,
+      "target_ids_sha256": "9174b015a222fa8683591a21e9f2bbb3c3c084f4b2c9c7c30934377bc30f3300",
+      "predicted_win_csv_sha256": "914cfeb5851178b70cd9eba0745f344fcde81a6db8d354c8123773461372f155",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2025q2.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2025q2.json",
+      "manifest_git_blob_sha": "c19e400e66e820fd0345217f6087aa5f52d01dca"
+    },
+    {
+      "period": "2025q3",
+      "from": "2025-07-01",
+      "until_exclusive": "2025-10-01",
+      "train_max_date": "2025-06-30",
+      "training_races": 11518,
+      "target_races": 1308,
+      "target_rider_rows": 9089,
+      "target_ids_sha256": "690cdb4a7238195b27f96bf1a801877f553db3a98b7c344b2620a654e0297c11",
+      "predicted_win_csv_sha256": "15dc02569133d6cd0805b9b45fb5f0c403eb5785c1f7ab84fb3c731af9bbf875",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2025q3.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2025q3.json",
+      "manifest_git_blob_sha": "211f2601e71c666cfda47a0d841d9e884f0e009e"
+    },
+    {
+      "period": "2025q4",
+      "from": "2025-10-01",
+      "until_exclusive": "2026-01-01",
+      "train_max_date": "2025-09-30",
+      "training_races": 12821,
+      "target_races": 1317,
+      "target_rider_rows": 9129,
+      "target_ids_sha256": "b371e60e2b7c7fd6e01c26a9abd7a8c2a7842b5c3323afc198f738fb8997b488",
+      "predicted_win_csv_sha256": "dfcd411db7a070c26d99710a962172feb4c5a2b42a60c6d347018c5eeff84c0e",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2025q4.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2025q4.json",
+      "manifest_git_blob_sha": "fe4a0446aa3673b5b848462787ab93580ee83213"
+    },
+    {
+      "period": "2026q1",
+      "from": "2026-01-01",
+      "until_exclusive": "2026-04-01",
+      "train_max_date": "2025-12-31",
+      "training_races": 14127,
+      "target_races": 1256,
+      "target_rider_rows": 8715,
+      "target_ids_sha256": "e51fa6e49be10cc352269af6e6acd19b516f41f66fa1abb5162cbf690fedc87d",
+      "predicted_win_csv_sha256": "1dfeb71f04f8eac5837ae1450f812f0aed3452620221cee55a7ecbd7606d29de",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2026q1.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2026q1.json",
+      "manifest_git_blob_sha": "610d16d04db8b07e142dec6246648c115e784d13"
+    },
+    {
+      "period": "2026q2",
+      "from": "2026-04-01",
+      "until_exclusive": "2026-07-01",
+      "train_max_date": "2026-03-31",
+      "training_races": 15377,
+      "target_races": 1306,
+      "target_rider_rows": 8993,
+      "target_ids_sha256": "fdf14c43c22f38831c1a694dd521f86d9e519cb677340f227d91dd5f5a514f7b",
+      "predicted_win_csv_sha256": "3205537e995665a44d98571b24bf9d26030a2fd35384b62314bd2019bdcc5b81",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2026q2.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2026q2.json",
+      "manifest_git_blob_sha": "209dacd95e049f791d5dd466285dde4be56a640f"
+    },
+    {
+      "period": "2026julaug",
+      "from": "2026-07-01",
+      "until_exclusive": "2026-09-01",
+      "train_max_date": "2026-06-30",
+      "training_races": 16680,
+      "target_races": 901,
+      "target_rider_rows": 6225,
+      "target_ids_sha256": "09967618103d969107bc5b427bd6b91b5e981f19358e1ca7d6e0812f727f0378",
+      "predicted_win_csv_sha256": "95be2ed36b7c5553162db1953fe82615b7e2f3d1c9678f0c87368f6aa38a318d",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2026julaug.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2026julaug.json",
+      "manifest_git_blob_sha": "c3089d75cbaa5ccae2e6e93c9592385e691f3f0a"
+    },
+    {
+      "period": "2026sep",
+      "from": "2026-09-01",
+      "until_exclusive": "2026-10-01",
+      "train_max_date": "2026-08-30",
+      "training_races": 17578,
+      "target_races": 422,
+      "target_rider_rows": 2920,
+      "target_ids_sha256": "4f8a9f64bae709e86d79909da970c82150db864e0dfea46d0177d518a54a195e",
+      "predicted_win_csv_sha256": "e6c07aceb668feedf29a6288eb71848442e4b8a6f7a56da1d6978e46630e9fa4",
+      "forecast_csv_path": "research/benter_walkforward_v7/frozen_term_unscaled/independent_win_2026sep.csv",
+      "manifest_path": "research/benter_walkforward_v7/frozen_term_unscaled/manifest_2026sep.json",
+      "manifest_git_blob_sha": "8452ebb0318e1ea3ac6e8b5564da049fd17a4f8e"
+    }
+  ],
+  "input_snapshot_certified_pre_race": false,
+  "note": "The CSV/JSON remain in origin repository. Do not read origin's mutable branch HEAD as data."
+}
