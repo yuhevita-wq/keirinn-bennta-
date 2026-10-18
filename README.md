@@ -11,7 +11,7 @@
 | **F1・S級の母数固定** | 14,081R（1〜3着一意・凍結予測あり） |
 | **1着独立勝率** | 研究基準モデルとして採用 |
 | **2着条件付き確率** | **14,081R・83,381候補から4係数の研究基準式を発見・固定** |
-| 3着条件付き確率 | 研究前。旧V7係数を転用しない |
+| **3着条件付き確率** | **14,081R・69,300候補から前後位置＋役割の13係数モデルを研究基準として固定** |
 | 全券種の市場統合・期待値判定 | 未実施 |
 
 採用済み1着独立モデル：**V2 `full_plus_line` 多項ロジット＋`term=999` の非標準化0/1カテゴリ＋高確率域校正**。
@@ -34,9 +34,14 @@
 - [2着確率の数学的法則・実結果からの導出](docs/SECOND_PLACE_RESEARCH.md)
 - [2着研究の4係数固定](models/second_conditional_v1.json)
 - [2着の実結果との偏り](reports/second_place_empirical.json)
+- [3着の実結果から発見した位置と数式](docs/THIRD_PLACE_RESEARCH.md)
+- [3着条件付き13係数モデル](models/third_conditional_v1.json)
+- [3着の位置別実測](reports/third_place_empirical.json)
+- [3着モデルの比較検証](reports/third_place_models.json)
 - [2着モデル間の同一条件比較](reports/second_place_compare.json)
 - `src/predict_first.py`：出走表・ライン情報から採用済み1着確率を計算するコード
 - [`src/predict_first_second.py`](src/predict_first_second.py)：全順序付き1・2着確率・2着周辺確率を計算するコード（市場オッズ未使用）
+- [`src/predict_ordered_triples.py`](src/predict_ordered_triples.py)：1着×条件付き2着×条件付き3着の全3連単順序確率（7車210通り）
 - [`scripts/stage_history.py`](scripts/stage_history.py)：旧データの固定コミットから14,081Rの1着確率・ライン・1〜3着を照合
 - [固定母数を実際に再現した監査結果](reports/staged_history_audit.json)
 - [歴史データを新研究で使用する手順](docs/HISTORICAL_DATA_STAGING.md)
@@ -48,7 +53,7 @@
 2. 結果から法則を発見するために、14,081Rを研究対象として使える。未使用サンプル確保を口実に発見対象を狭めない。
 3. レースの事前予測には、そのレースの結果や以後の結果を入力しない。法則の発見と未来予測の評価を区別する。
 4. 事前に券種・車番・点数・買い方を固定しない。全券種と市場の実オッズを比較し、実測で優位のある価格だけを調べる。
-5. 旧V7の2着・3着係数は**新しい1着勝率に接続しない**。2着は14,081Rで再推定して4係数モデルを研究基準として固定した。3着は未研究。
+5. 旧V7の2着・3着係数は**新しい1着勝率に接続しない**。2着・3着はいずれも14,081Rで新たに実結果から数式を再推定し、研究基準として固定した。
 
 ## データの保管場所
 
