@@ -1,0 +1,85 @@
+name: Compare frozen F1 S-class model with final-odds market
+on:
+  push:
+    branches: [research/benter-market-compare-20261027]
+    paths:
+      - .github/workflows/compare-frozen-market.yml
+      - scripts/compare_fixed_market.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Read frozen research repository
+        uses: actions/checkout@v4
+        with:
+          path: project
+          ref: research/benter-market-compare-20261027
+          persist-credentials: true
+      - name: Read fixed original data commit, sparse immutable inputs only
+        uses: actions/checkout@v4
+        with:
+          repository: yuhevita-wq/keirin-market-analysis-
+          ref: 8da8f4f8e1125eb522df5546d07cd6657fab7dda
+          path: origin
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /research/benter_walkforward_v7/frozen_term_unscaled/independent_win_*.csv
+            /data/2023/s_class_f1_all_parts/*/entries.csv
+            /data/2023/s_class_f1_all_parts/*/races.csv
+            /data/2023/s_class_f1_all_parts/*/results.csv
+            /data/2024/s_class_f1_all_parts/*/entries.csv
+            /data/2024/s_class_f1_all_parts/*/races.csv
+            /data/2024/s_class_f1_all_parts/*/results.csv
+            /data/2024/s_class_f1_all_parts/*/trifecta_final_odds.csv
+            /data/2025/s_class_f1_all_parts/*/entries.csv
+            /data/2025/s_class_f1_all_parts/*/races.csv
+            /data/2025/s_class_f1_all_parts/*/results.csv
+            /data/2025/s_class_f1_all_parts/*/trifecta_final_odds.csv
+            /data/2026_h1/s_class_f1_all/entries.csv
+            /data/2026_h1/s_class_f1_all/races.csv
+            /data/2026_h1/s_class_f1_all/results.csv
+            /data/2026_h1/s_class_f1_all/trifecta_final_odds_part*.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/entries.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/races.csv
+            /data/2026_future_block1/s_class_f1_20260701_20260830/results.csv
+            /research/benter_calibration_v4/sep_holdout/entries.csv
+            /research/benter_calibration_v4/sep_holdout/races.csv
+            /research/benter_calibration_v4/sep_holdout/results.csv
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install analysis-only numeric dependencies
+        run: python -m pip install --disable-pip-version-check numpy scipy
+      - name: Reproduce 14,081 known podiums using unmodified frozen predictions
+        run: |
+          python project/scripts/stage_history.py --source-root origin \
+            --output project/stage/f1_s_class_14081.jsonl
+      - name: Same-race model-market comparison with chronological fit/test
+        run: |
+          python project/scripts/compare_fixed_market.py \
+            --stage project/stage/f1_s_class_14081.jsonl \
+            --source-root origin \
+            --output project/reports/market_vs_fixed_first_20261027.json
+      - name: Upload diagnostic report
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixed-model-vs-final-market-20261027
+          path: project/reports/market_vs_fixed_first_20261027.json
+          retention-days: 30
+      - name: Preserve diagnostic report on this branch without touching models
+        working-directory: project
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/market_vs_fixed_first_20261027.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Record immutable model vs final market evaluation"
+            git push origin HEAD:research/benter-market-compare-20261027
+          fi
