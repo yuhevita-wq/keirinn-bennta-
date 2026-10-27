@@ -1,0 +1,402 @@
+{
+  "study": "FIXED_INDEPENDENT_F1S_VS_MARKET_FIRST_FROM_FINAL_TRIFECTA",
+  "model_modified": false,
+  "source_locked_git_commit": "8da8f4f8e1125eb522df5546d07cd6657fab7dda",
+  "stage_races": 14081,
+  "matched_races": 12623,
+  "excluded": {
+    "no_trifecta_market_rows": 1458
+  },
+  "market_method": "Normalize inverse final 3-ren-tan odds over full ordered combination space; marginalize by first-position car number",
+  "market_warning": "Final odds are NOT pre-deadline odds. Retrospective alignment, not actionable profitability; this is not native win market.",
+  "integrated_model": {
+    "fit_dates": "2024-01-01 to 2025-03-31",
+    "fit_coefficients": {
+      "alpha_frozen_independent": 0.0,
+      "beta_final_market": 1.0080216489769631
+    },
+    "fit_loss_total": 9222.927136476894,
+    "note": "Auxiliary diagnostic combination only. Frozen independent model not changed."
+  },
+  "fit": {
+    "n": 6292,
+    "date_start": "2024-01-01",
+    "date_end": "2025-03-31",
+    "models": {
+      "independent": {
+        "brier": 0.7382437746092503,
+        "races": 6292,
+        "log_loss": 1.57786768500682,
+        "top1_accuracy": 0.38254926891290525,
+        "benter_pseudo_r2": 0.1840008467043468
+      },
+      "market": {
+        "brier": 0.7037551226670077,
+        "races": 6292,
+        "log_loss": 1.465839251933519,
+        "top1_accuracy": 0.41719643992371264,
+        "benter_pseudo_r2": 0.2419366973472714
+      },
+      "combined": {
+        "brier": 0.7038432189713724,
+        "races": 6292,
+        "log_loss": 1.4658180445767472,
+        "top1_accuracy": 0.41719643992371264,
+        "benter_pseudo_r2": 0.24194766479741558
+      }
+    },
+    "paired": {
+      "model_minus_market": {
+        "delta_mean_loss": 0.1120284330733018,
+        "date_block_bootstrap_95ci": [
+          0.09861933565555824,
+          0.12604602899264836
+        ]
+      },
+      "combined_minus_market": {
+        "delta_mean_loss": -2.1207356775005442e-05,
+        "date_block_bootstrap_95ci": [
+          -0.00016974817335114605,
+          0.00013453754414540354
+        ]
+      }
+    },
+    "unique_days": 453
+  },
+  "later": {
+    "n": 6331,
+    "date_start": "2025-04-01",
+    "date_end": "2026-06-30",
+    "models": {
+      "independent": {
+        "brier": 0.7344536868231321,
+        "races": 6331,
+        "log_loss": 1.574135645421394,
+        "top1_accuracy": 0.38809034907597534,
+        "benter_pseudo_r2": 0.18594677258439107
+      },
+      "market": {
+        "brier": 0.7040238974096868,
+        "races": 6331,
+        "log_loss": 1.4717885802880173,
+        "top1_accuracy": 0.4222081819617754,
+        "benter_pseudo_r2": 0.23887484071541754
+      },
+      "combined": {
+        "brier": 0.7040901736415213,
+        "races": 6331,
+        "log_loss": 1.4717748030534126,
+        "top1_accuracy": 0.4222081819617754,
+        "benter_pseudo_r2": 0.2388819655158294
+      }
+    },
+    "paired": {
+      "model_minus_market": {
+        "delta_mean_loss": 0.10234706513337963,
+        "date_block_bootstrap_95ci": [
+          0.08454794652718656,
+          0.12119825773746142
+        ]
+      },
+      "combined_minus_market": {
+        "delta_mean_loss": -1.3777234614736229e-05,
+        "date_block_bootstrap_95ci": [
+          -0.0001681642243265702,
+          0.0001495185251519758
+        ]
+      }
+    },
+    "unique_days": 449
+  },
+  "periods": {
+    "2025q2": {
+      "n": 1239,
+      "date_start": "2025-04-01",
+      "date_end": "2025-06-30",
+      "models": {
+        "independent": {
+          "brier": 0.7349780922058681,
+          "races": 1239,
+          "log_loss": 1.558122438723914,
+          "top1_accuracy": 0.3833736884584342,
+          "benter_pseudo_r2": 0.1935076993480207
+        },
+        "market": {
+          "brier": 0.7034323053187512,
+          "races": 1239,
+          "log_loss": 1.461019648156409,
+          "top1_accuracy": 0.4132364810330912,
+          "benter_pseudo_r2": 0.2437686101841754
+        },
+        "combined": {
+          "brier": 0.7035338992031085,
+          "races": 1239,
+          "log_loss": 1.4609888332659453,
+          "top1_accuracy": 0.4132364810330912,
+          "benter_pseudo_r2": 0.24378456013219407
+        }
+      },
+      "paired": {
+        "model_minus_market": {
+          "delta_mean_loss": 0.09710279056750666,
+          "date_block_bootstrap_95ci": [
+            0.06759858737525691,
+            0.13434217738224527
+          ]
+        },
+        "combined_minus_market": {
+          "delta_mean_loss": -3.081489046261839e-05,
+          "date_block_bootstrap_95ci": [
+            -0.0003634998726653886,
+            0.00032990328867860786
+          ]
+        }
+      },
+      "unique_days": 90
+    },
+    "2025q3": {
+      "n": 1283,
+      "date_start": "2025-07-01",
+      "date_end": "2025-09-30",
+      "models": {
+        "independent": {
+          "brier": 0.731903780354557,
+          "races": 1283,
+          "log_loss": 1.5582157421642928,
+          "top1_accuracy": 0.3951675759937646,
+          "benter_pseudo_r2": 0.19591770196686797
+        },
+        "market": {
+          "brier": 0.7016369751066183,
+          "races": 1283,
+          "log_loss": 1.4871991934507547,
+          "top1_accuracy": 0.4356975837879969,
+          "benter_pseudo_r2": 0.2325641997160498
+        },
+        "combined": {
+          "brier": 0.7017043575722489,
+          "races": 1283,
+          "log_loss": 1.487335208718499,
+          "top1_accuracy": 0.4356975837879969,
+          "benter_pseudo_r2": 0.23249401208663767
+        }
+      },
+      "paired": {
+        "model_minus_market": {
+          "delta_mean_loss": 0.07101654871353773,
+          "date_block_bootstrap_95ci": [
+            0.0478424505289721,
+            0.0954368422266996
+          ]
+        },
+        "combined_minus_market": {
+          "delta_mean_loss": 0.00013601526774032467,
+          "date_block_bootstrap_95ci": [
+            -0.00025549216767879675,
+            0.0005075986045735391
+          ]
+        }
+      },
+      "unique_days": 91
+    },
+    "2025q4": {
+      "n": 1290,
+      "date_start": "2025-10-01",
+      "date_end": "2025-12-31",
+      "models": {
+        "independent": {
+          "brier": 0.7286004447673377,
+          "races": 1290,
+          "log_loss": 1.5601160741800564,
+          "top1_accuracy": 0.3922480620155039,
+          "benter_pseudo_r2": 0.19376203269700143
+        },
+        "market": {
+          "brier": 0.70157941403394,
+          "races": 1290,
+          "log_loss": 1.4688260083652784,
+          "top1_accuracy": 0.4317829457364341,
+          "benter_pseudo_r2": 0.2409389821019653
+        },
+        "combined": {
+          "brier": 0.7015977297085068,
+          "races": 1290,
+          "log_loss": 1.4687826400947284,
+          "top1_accuracy": 0.4317829457364341,
+          "benter_pseudo_r2": 0.24096139398969119
+        }
+      },
+      "paired": {
+        "model_minus_market": {
+          "delta_mean_loss": 0.09129006581477556,
+          "date_block_bootstrap_95ci": [
+            0.056341341644986845,
+            0.1308546678394721
+          ]
+        },
+        "combined_minus_market": {
+          "delta_mean_loss": -4.336827055245355e-05,
+          "date_block_bootstrap_95ci": [
+            -0.0003708424271176536,
+            0.0002744612106871093
+          ]
+        }
+      },
+      "unique_days": 91
+    },
+    "2026q1": {
+      "n": 1231,
+      "date_start": "2026-01-01",
+      "date_end": "2026-03-31",
+      "models": {
+        "independent": {
+          "brier": 0.7302752640885654,
+          "races": 1231,
+          "log_loss": 1.544327703537963,
+          "top1_accuracy": 0.39073923639317626,
+          "benter_pseudo_r2": 0.20236832685225825
+        },
+        "market": {
+          "brier": 0.687566043140628,
+          "races": 1231,
+          "log_loss": 1.4198946207486938,
+          "top1_accuracy": 0.437855402112104,
+          "benter_pseudo_r2": 0.2666369194526218
+        },
+        "combined": {
+          "brier": 0.6875121071509519,
+          "races": 1231,
+          "log_loss": 1.4194259580593007,
+          "top1_accuracy": 0.437855402112104,
+          "benter_pseudo_r2": 0.26687897960878304
+        }
+      },
+      "paired": {
+        "model_minus_market": {
+          "delta_mean_loss": 0.12443308278926866,
+          "date_block_bootstrap_95ci": [
+            0.09507003917324273,
+            0.15916956933599724
+          ]
+        },
+        "combined_minus_market": {
+          "delta_mean_loss": -0.000468662689389338,
+          "date_block_bootstrap_95ci": [
+            -0.0007881160170694786,
+            -0.00013586623636242448
+          ]
+        }
+      },
+      "unique_days": 88
+    },
+    "2026q2": {
+      "n": 1288,
+      "date_start": "2026-04-01",
+      "date_end": "2026-06-30",
+      "models": {
+        "independent": {
+          "brier": 0.7463450784133487,
+          "races": 1288,
+          "log_loss": 1.647927898788558,
+          "top1_accuracy": 0.37888198757763975,
+          "benter_pseudo_r2": 0.14504780993888677
+        },
+        "market": {
+          "brier": 0.7251484362881353,
+          "races": 1288,
+          "log_loss": 1.5193616177076836,
+          "top1_accuracy": 0.39285714285714285,
+          "benter_pseudo_r2": 0.2117485579867293
+        },
+        "combined": {
+          "brier": 0.7253425638352674,
+          "races": 1288,
+          "log_loss": 1.5196794105866285,
+          "top1_accuracy": 0.39285714285714285,
+          "benter_pseudo_r2": 0.21158368565339514
+        }
+      },
+      "paired": {
+        "model_minus_market": {
+          "delta_mean_loss": 0.12856628108087473,
+          "date_block_bootstrap_95ci": [
+            0.06456390043199386,
+            0.20514399248296974
+          ]
+        },
+        "combined_minus_market": {
+          "delta_mean_loss": 0.0003177928789420752,
+          "date_block_bootstrap_95ci": [
+            -3.633261473737421e-05,
+            0.000655511025457097
+          ]
+        }
+      },
+      "unique_days": 89
+    }
+  },
+  "source_stats": [
+    {
+      "file": "data/2024/s_class_f1_all_parts/2024_q1/trifecta_final_odds.csv",
+      "rows_all": 261450,
+      "rows_in_fixed_cohort": 259380
+    },
+    {
+      "file": "data/2024/s_class_f1_all_parts/2024_q2/trifecta_final_odds.csv",
+      "rows_all": 254700,
+      "rows_in_fixed_cohort": 252600
+    },
+    {
+      "file": "data/2024/s_class_f1_all_parts/2024_q3/trifecta_final_odds.csv",
+      "rows_all": 259980,
+      "rows_in_fixed_cohort": 258390
+    },
+    {
+      "file": "data/2024/s_class_f1_all_parts/2024_q4/trifecta_final_odds.csv",
+      "rows_all": 256530,
+      "rows_in_fixed_cohort": 255480
+    },
+    {
+      "file": "data/2025/s_class_f1_all_parts/2025_q1/trifecta_final_odds.csv",
+      "rows_all": 255510,
+      "rows_in_fixed_cohort": 253500
+    },
+    {
+      "file": "data/2025/s_class_f1_all_parts/2025_q2/trifecta_final_odds.csv",
+      "rows_all": 254130,
+      "rows_in_fixed_cohort": 250620
+    },
+    {
+      "file": "data/2025/s_class_f1_all_parts/2025_q3/trifecta_final_odds.csv",
+      "rows_all": 267360,
+      "rows_in_fixed_cohort": 263880
+    },
+    {
+      "file": "data/2025/s_class_f1_all_parts/2025_q4/trifecta_final_odds.csv",
+      "rows_all": 266760,
+      "rows_in_fixed_cohort": 263190
+    },
+    {
+      "file": "data/2026_h1/s_class_f1_all/trifecta_final_odds_part01.csv",
+      "rows_all": 180000,
+      "rows_in_fixed_cohort": 177480
+    },
+    {
+      "file": "data/2026_h1/s_class_f1_all/trifecta_final_odds_part02.csv",
+      "rows_all": 180000,
+      "rows_in_fixed_cohort": 178950
+    },
+    {
+      "file": "data/2026_h1/s_class_f1_all/trifecta_final_odds_part03.csv",
+      "rows_all": 154890,
+      "rows_in_fixed_cohort": 153420
+    }
+  ],
+  "limitations": [
+    "Historic racecards/lineups were acquired retrospectively, their exact 15-minute-prior status is unproven.",
+    "Model calibration changes were discovered in previously examined portions of the evaluation period: not a fully blind holdout.",
+    "Final odds provide market information formed after the pre-deadline purchase snapshot.",
+    "One ticket class (3-ren-tan) supplies a proxy for first-win market probabilities; not the single-win pool.",
+    "This estimates relative probability-information gain, not EV or realized return from bets."
+  ]
+}
